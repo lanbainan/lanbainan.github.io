@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python爬虫学习 | 梦梦的小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="我从小语文就没及格希望大家不要见笑，我使用的是Python3.7。我发现如果单纯学习Python太容易枯燥了，我就结合爬虫一起学习了。 使用urllib在Python3.x中urllib库是Python内置的HTTP请求库，也就是说不用额外安装即可使用。包含下面四个模块。   1、    request：它是最基本的HTTP请求模块，用来模拟发送请求。类似于在浏览器中直接输入网址，然后回车一样。">
+<meta name="keywords" content="python,爬虫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python爬虫学习">
+<meta property="og:url" content="http://www.lanbainan.cn/2018/07/29/2018-07-29/index.html">
+<meta property="og:site_name" content="梦梦的小站">
+<meta property="og:description" content="我从小语文就没及格希望大家不要见笑，我使用的是Python3.7。我发现如果单纯学习Python太容易枯燥了，我就结合爬虫一起学习了。 使用urllib在Python3.x中urllib库是Python内置的HTTP请求库，也就是说不用额外安装即可使用。包含下面四个模块。   1、    request：它是最基本的HTTP请求模块，用来模拟发送请求。类似于在浏览器中直接输入网址，然后回车一样。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb334c56.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb339d0a.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb345245.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb354539.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb35930a.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb417e57.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb37251d.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d8cb38cb71.png">
+<meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d9b4a54901.gif">
+<meta property="og:updated_time" content="2018-07-29T11:21:00.247Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python爬虫学习">
+<meta name="twitter:description" content="我从小语文就没及格希望大家不要见笑，我使用的是Python3.7。我发现如果单纯学习Python太容易枯燥了，我就结合爬虫一起学习了。 使用urllib在Python3.x中urllib库是Python内置的HTTP请求库，也就是说不用额外安装即可使用。包含下面四个模块。   1、    request：它是最基本的HTTP请求模块，用来模拟发送请求。类似于在浏览器中直接输入网址，然后回车一样。">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/29/5b5d8cb334c56.png">
+  
+    <link rel="alternative" href="/atom.xml" title="梦梦的小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/830.jpg">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/831.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">EV</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">只要没完蛋，就还可以继续。</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/categories/信息安全">信息安全</a></li>
+                        
+                            <li><a href="/categories/python">python</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=6oaLhIiLg46PnouEhouEjaqbm8SJhYc" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/lanbainan" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/lan-bai-83-69/activities" title="zhihu">zhihu</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/爬虫/" style="font-size: 13.33px;">爬虫</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">励志成为一个职业吹牛大王</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">EV</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/831.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">EV</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">只要没完蛋，就还可以继续。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/categories/信息安全">信息安全</a></li>
+                
+                    <li><a href="/categories/python">python</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=6oaLhIiLg46PnouEhouEjaqbm8SJhYc" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/lanbainan" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lan-bai-83-69/activities" title="zhihu">zhihu</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-2018-07-29" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/29/2018-07-29/" class="article-date">
+      <time datetime="2018-07-28T16:00:00.000Z" itemprop="datePublished">2018-07-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python爬虫学习
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/python/">python</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/爬虫/">爬虫</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>我从小语文就没及格希望大家不要见笑，我使用的是Python3.7。我发现如果单纯学习Python太容易枯燥了，我就结合爬虫一起学习了。</p>
+<h2 id="使用urllib"><a href="#使用urllib" class="headerlink" title="使用urllib"></a>使用urllib</h2><p>在Python3.x中urllib库是Python内置的HTTP请求库，也就是说不用额外安装即可使用。包含下面四个模块。</p>
+<blockquote>
+<ul>
+<li>1、    request：它是最基本的HTTP请求模块，用来模拟发送请求。类似于在浏览器中直接输入网址，然后回车一样。</li>
+<li>2、    error：异常处理模块，如果出现请求错误，我们可以捕获这些错误，进行重试或者其他操作保证程序不会意外停止。</li>
+<li>3、    parse：一个工具模块，提供许多URl的处理方法，如拆分、解析、合并等。</li>
+<li>4、    robotparser：顾名思义主要用于识别网站的robot.txt文件，判断哪些可以爬，哪些不可以爬，这个用的比较少。<a id="more"></a>
+<strong>urlopen()</strong><br>我们来试验下：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding:UTF-8</span></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">response = urllib.request.urlopen(<span class="string">'http://www.lanbainan.cn'</span>)</span><br><span class="line">print(response.read().decode(<span class="string">'UTF-8'</span>))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://i.loli.net/2018/07/29/5b5d8cb334c56.png" alt="1.png"><br>这里调用read()能得到返回内容。<br>注：请注意不要整体复制代码否则会报错。<br>这里的输出效果和在浏览器中查看审查元素是一样的。既然我们得到了源代码，链接、图片地址、文本信息就都可以提取出来了。至于怎么提取等下写！(￣▽￣)~*<br><strong>data参数</strong><br>如果使用该参数，并且如果它是字节流编码格式的内容，即bytes类型，需要通过bytes()转化，一旦传递了这个参数，请求方式就由GET变为POST。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"></span><br><span class="line">data = bytes(urllib.parse.urlencode(&#123;<span class="string">'word'</span>:<span class="string">'hello'</span>&#125;),encoding=<span class="string">'utf8'</span>)</span><br><span class="line">response = urllib.request.urlopen(<span class="string">'http://httpbin.org/post'</span>,data=data)</span><br><span class="line">print(response.read())</span><br></pre></td></tr></table></figure></p>
+<p>word是参数，hello是值<br><img src="https://i.loli.net/2018/07/29/5b5d8cb339d0a.png" alt="2.png"><br>这是模拟表单提交的方式，以POST方式传递数据。<br><strong>Request</strong><br>我们知道了利用urlopen()方法可以实现最基本的请求发起，但是这几个简单的参数不足以构建一个完整的请求。如果在请求中加入headers等信息，就需要request类来构建。<br>Request通过怎样的参数来构造，如下：<br><code>class urllib.request.Request(url, data=None, headers={}, origin_req_host=None, unverifiable=False, method=None)</code></p>
+<blockquote>
+<ul>
+<li>第一个参数url用于请求URL。</li>
+<li>第二个参数data如果要传,必须传bytes (字节流)类型的。如果它是字典,可以先用 urllib.parse模块里的urlencode()编码。</li>
+<li>第三个参数headers是一个字典,它就是请求头,我们可以在构造请求时通过headers参数直接构造,也可以通过调用请求实例的<code>add header()</code>方法添加。添加请求头最常用的用法就是通过修改User-Agent来伪装浏览器,默认的User-Agent是 Python-urllib,我们可以通过修改它来伪装浏览器。比如要伪装火狐浏览器,可以把它设置为：<code>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0</code></li>
+<li>第四个参数origin_req_host指的是请求方的host名称或者IP地址。</li>
+<li>第五个参数unverifiable表示这个请求是否是无法验证的,默认是False,意思就是说用户没有足够权限来选择接收这个请求的结果。例如,我们请求一个HTML文档中的图片,但是我们没有自动抓取图像的权限,这时unverifiable的值就是True.</li>
+<li>第六个参数method是一个字符串,用来指示请求使用的方法,比如GET, POST和PUT等。</li>
+</ul>
+</blockquote>
+<p>这里我们使用多个参数来构建请求：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request,parse</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://httpbin.org/post'</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'</span>,</span><br><span class="line">    <span class="string">'Host'</span>:<span class="string">'httpbin.org'</span></span><br><span class="line">&#125;</span><br><span class="line">dict = &#123;</span><br><span class="line">    <span class="string">'name'</span>:<span class="string">'hello'</span></span><br><span class="line">&#125;</span><br><span class="line">data = bytes(parse.urlencode(dict),encoding=<span class="string">'utf8'</span>)</span><br><span class="line">req = request.Request(url=url,data=data,headers=headers,method=<span class="string">'POST'</span>)</span><br><span class="line">response = request.urlopen(req)</span><br><span class="line">print(response.read().decode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/07/29/5b5d8cb345245.png" alt="3.png"><br>在这里我们使用了4个参数来构建一个请求，url就是要请求的URL，headers中指定了User-Agent和host，data用urlencode()和bytes()方法转为字节流，method还指定了请求方式为POST。<br>注：httpbin.org这个站点它可以提供HTTP请求测试</p>
+<p><strong>正确安装requests库</strong><br>直接命令行安装，Windows、linux、mac都可以<br><code>pip3 install request</code><br>在requests库得到中请求方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r = requests.post(<span class="string">'http://httpbin.org/post'</span>)</span><br><span class="line">r = requests.put(<span class="string">'http://httpbin.org/put'</span>)</span><br><span class="line">r = requests.delete(<span class="string">'http://httpbin.org/delete'</span>)</span><br><span class="line">r = requests.head(<span class="string">'http://httpbin.org/get'</span>)</span><br><span class="line">r = requests.options(<span class="string">'http://httpbin.org/get'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>再把代码简化下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding:UTF-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'</span>&#125;</span><br><span class="line">r = requests.get(<span class="string">'https://baike.baidu.com/item/%E6%A2%A6%E6%A2%A6%C2%B7%E8%B4%9D%E8%8E%89%E9%9B%85%C2%B7%E6%88%B4%E6%AF%94%E8%B7%AF%E5%85%8B'</span>, headers = headers)</span><br><span class="line">r.encoding=<span class="string">'utf-8'</span></span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/07/29/5b5d8cb354539.png" alt="4.png"><br>在使用requests库时，r.text返回的是Unicode型数据，会中文乱码。通过r.encoding属性来改变它，大多数 unicode 字符集都能被无缝地解码。<br><strong>安装lxml、beautifulsoup4</strong><br>在Windows、Linux命令行下<code>pip3 install lxml</code>，在Windows下安装错误，就用wheel安装，<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml" target="_blank" rel="noopener">下载</a>对应系统和python版本的lxml，本地安装<code>pip3 install lxml‑4.2.3‑cp37‑cp37m‑win_amd64.whl</code><br>注：cp对应的是Python版本，3.7就是cp37。<br>Beautiful soup是一个第三方模块，命令行下<code>pip3 install beautifulsoup4</code>，Beautiful Soup可以很方便地帮我们提取出 HTML 或 XML标签中的内容，准备工作完成。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding:UTF-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'</span>&#125;</span><br><span class="line">r = requests.get(<span class="string">'https://baike.baidu.com/item/%E6%A2%A6%E6%A2%A6%C2%B7%E8%B4%9D%E8%8E%89%E9%9B%85%C2%B7%E6%88%B4%E6%AF%94%E8%B7%AF%E5%85%8B'</span>, headers = headers)</span><br><span class="line">r.encoding=<span class="string">'utf-8'</span></span><br><span class="line">content=r.text</span><br><span class="line">print(content)</span><br></pre></td></tr></table></figure></p>
+<p>我们将r.text的内容存储在content变量中（不知道这个说法对不对），打印content。先熟悉基本<a href="http://wiki.jikexueyuan.com/project/python-crawler-guide/beautiful-soup.html" target="_blank" rel="noopener">BeautifulSoup用法</a><br>代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">content = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;梦梦·贝莉雅·戴比路克&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">梦梦好可爱(*╹▽╹*)</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(content,<span class="string">'lxml'</span>) </span><br><span class="line"><span class="comment">#创建bs对象，bs是使用的python默认的解析器，lxml也是解析器</span></span><br><span class="line">print(soup.title) </span><br><span class="line"><span class="comment">#这里打印的是title</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/07/29/5b5d8cb35930a.png" alt="5.png"><br>切入正题，我们将从百度百科将梦梦的介绍爬下来。她的名字在h1标签中<br><img src="https://i.loli.net/2018/07/29/5b5d8cb417e57.png" alt="6.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bb = soup.h1.get_text()  #get_text()能去除标签</span><br></pre></td></tr></table></figure></p>
+<p>剩下的内容都在<code>&lt;div class=&quot;para&quot; label-module=&quot;para&quot;&gt;</code>中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd = soup.find_all(class_=&apos;para&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>这个时候代码应该是：</p>
+<pre><code class="python"><span class="comment">#encoding:UTF-8</span>
+<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup
+<span class="keyword">import</span> requests
+
+headers = {<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'</span>}
+r = requests.get(<span class="string">'https://baike.baidu.com/item/%E6%A2%A6%E6%A2%A6%C2%B7%E8%B4%9D%E8%8E%89%E9%9B%85%C2%B7%E6%88%B4%E6%AF%94%E8%B7%AF%E5%85%8B'</span>, headers = headers)
+r.encoding=<span class="string">'utf-8'</span>
+content=r.text
+soup = BeautifulSoup(r.text,<span class="string">'lxml'</span>)
+
+dd = soup.find_all(class_=<span class="string">'para'</span>)
+bb = soup.h1.get_text()
+print(bb)
+print(<span class="string">'---------------------'</span>)
+<span class="keyword">for</span> aa <span class="keyword">in</span> dd:
+    print(aa.get_text())
+</code></pre>
+<p><img src="https://i.loli.net/2018/07/29/5b5d8cb37251d.png" alt="7.png"><br>这里<code>print(&#39;---------------------&#39;)</code>只是为了分割标题与正文。<br>恭喜我终于入门了。美滋滋啊！</p>
+<h2 id="我碰上的坑"><a href="#我碰上的坑" class="headerlink" title="我碰上的坑"></a>我碰上的坑</h2><p>我写py文件的时候，一直出现<code>IndentationError:expected an indented block</code>，我对自己的错误深信不疑，改了又改，查了资料才知道Python语言是一款对缩进非常敏感的语言，空格和Tab不能混用，然后我就不缩进了，不缩进也错了，大佬说：“冒号下一行多半要缩进，该缩就缩”。<br>string和get_text()这两个功能虽说差不多，但是还是有差别sting是数据类型,get_text是方法。前者提取百度百科会出现None，后者不会。<br><img src="https://i.loli.net/2018/07/29/5b5d8cb38cb71.png" alt="8.png"></p>
+<h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a><br><img src="https://i.loli.net/2018/07/29/5b5d9b4a54901.gif" alt="4b90f603738da977d3f5a635b851f8198718e3d2.jpg.gif"></p>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/07/29/2018-07-29/">Python爬虫学习</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
+        <p><span>发布时间:</span>2018年07月29日 - 00时00分</p>
+        <p><span>最后更新:</span>2018年07月29日 - 19时21分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/07/29/2018-07-29/" title="Python爬虫学习">http://www.lanbainan.cn/2018/07/29/2018-07-29/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2018/07/29/2018-07-29/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/08/21/2018-8-21/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          主动信息收集
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/25/2018-7-22/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">被动信息收集</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用urllib"><span class="toc-number">1.</span> <span class="toc-text">使用urllib</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我碰上的坑"><span class="toc-number">2.</span> <span class="toc-text">我碰上的坑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#到此结束"><span class="toc-number">3.</span> <span class="toc-text">到此结束</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/08/21/2018-8-21/" title="上一篇: 主动信息收集">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/07/25/2018-7-22/" title="下一篇: 被动信息收集">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/12/2018-11-12/">提权</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/16/2018-10-16/">缓冲区溢出</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/08/2018-09-08/">使用Python爬虫打造翻译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/2018-8-21/">主动信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/29/2018-07-29/">Python爬虫学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/2018-7-22/">被动信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/Python1/">Python的类型与运算一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/hexo/">搭建hexo博客的坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/netcat/">NETCAT学习笔记</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 EV
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >小站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?b64fba78360a440494de875353bff54e";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>

