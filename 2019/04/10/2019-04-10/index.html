@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/04/10/5cad5fd7b4f10.png">
 <meta property="og:image" content="https://i.loli.net/2019/04/10/5cad660ca5109.png">
 <meta property="og:image" content="https://i.loli.net/2019/04/10/5cad675138700.gif">
-<meta property="og:updated_time" content="2019-04-10T03:50:18.848Z">
+<meta property="og:updated_time" content="2019-04-10T03:52:40.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对于DC-1的测试">
 <meta name="twitter:description" content="实战测试项目地址：https://www.vulnhub.com/entry/dc-1-1,292/主机NET模式实验目的：拿到root权限，获取flag（共有五个flag）小知识：Drupal Drupalgeddon 2表单API属性注入，该模块主要是利用表单API中的Drupal属性注入Drupal 6.x, &amp;lt; 7.58, 8.2.x, &amp;lt; 8.3.9, &amp;lt; 8.4.6,">
@@ -259,7 +259,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="实战测试"><a href="#实战测试" class="headerlink" title="实战测试"></a>实战测试</h2><p>项目地址：<a href="https://www.vulnhub.com/entry/dc-1-1,292/" target="_blank" rel="noopener">https://www.vulnhub.com/entry/dc-1-1,292/</a><br>主机NET模式<br>实验目的：拿到root权限，获取flag（共有五个flag）<br>小知识：Drupal Drupalgeddon 2表单API属性注入，该模块主要是利用表单API中的Drupal属性注入<br>Drupal 6.x, &lt; 7.58, 8.2.x, &lt; 8.3.9, &lt; 8.4.6, and &lt; 8.5.1 都是易受攻击的<br><a href="https://www.cvedetails.com/cve/cve-2018-7600" target="_blank" rel="noopener">参考CVE-2018-7600</a></p>
+        <h2 id="实战测试"><a href="#实战测试" class="headerlink" title="实战测试"></a>实战测试</h2><p>项目地址：<a href="https://www.vulnhub.com/entry/dc-1-1,292/" target="_blank" rel="noopener">https://www.vulnhub.com/entry/dc-1-1,292/</a><br>主机NET模式<br>实验目的：拿到root权限，获取flag（共有五个flag）<br>小知识：Drupal Drupalgeddon 2表单API属性注入，该模块主要是利用表单API中的Drupal属性注入<br>Drupal 6.x, &lt; 7.58, 8.2.x, &lt; 8.3.9, &lt; 8.4.6, and &lt; 8.5.1 都是易受攻击的<br><a href="https://www.cvedetails.com/cve/cve-2018-7600" target="_blank" rel="noopener">参考CVE-2018-7600</a><br><a id="more"></a></p>
 <h3 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# arp-scan -l</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.loli.net/2019/04/09/5cac11e762336.png" alt="1.png"><br>快速高效，只能用于局域网<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -sP 192.168.67.0/24</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://i.loli.net/2019/04/09/5cac11e79182b.png" alt="2.png"><br>相对较慢，用途广泛</p>
@@ -311,7 +311,7 @@
         <p><span>本文标题:</span><a href="/2019/04/10/2019-04-10/">对于DC-1的测试</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
         <p><span>发布时间:</span>2019年04月10日 - 11时50分</p>
-        <p><span>最后更新:</span>2019年04月10日 - 11时50分</p>
+        <p><span>最后更新:</span>2019年04月10日 - 11时52分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/10/2019-04-10/" title="对于DC-1的测试">http://www.lanbainan.cn/2019/04/10/2019-04-10/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/04/10/2019-04-10/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
