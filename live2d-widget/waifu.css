@@ -1,6 +1,6 @@
 #waifu {
 	position:fixed;
-	right:0;
+	right:30px;
 	bottom:0;
 	z-index:1;
 	line-height:0;
@@ -8,9 +8,10 @@
 	transform:translateY(3px)
 }
 #waifu:hover {
+	-webkit-transform:translateY(0);
 	transform:translateY(0)
 }
-@media (max-width:992px) {
+@media (max-width:768px) {
 	#waifu {
 	display:none
 }
@@ -25,6 +26,7 @@
 	box-shadow:0 3px 15px 2px rgba(191,158,118,.2);
 	font-size:14px;
 	line-height:24px;
+	color:#DDDDDD;
 	word-break:break-all;
 	text-overflow:ellipsis;
 	overflow:hidden;
@@ -49,7 +51,7 @@
 	cursor:-ms-grabbing
 }
 #waifu-tool {
-	color:#ffffff;
+	color:#aaa;
 	top:70px;
 	left:-10px;
 	position:absolute;
