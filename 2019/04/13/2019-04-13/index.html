@@ -14,7 +14,7 @@
 <meta property="og:description" content="可爱的看板娘官方的live2d已经满足不了我的跳动的心了，偶然间看见别人的live2d贼炫酷，我也去搞来试一试。由张书樵的项目而来">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/04/12/5cb0459224f2c.png">
-<meta property="og:updated_time" content="2019-04-12T08:27:33.447Z">
+<meta property="og:updated_time" content="2019-04-14T13:36:31.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="看板娘和在线对话">
 <meta name="twitter:description" content="可爱的看板娘官方的live2d已经满足不了我的跳动的心了，偶然间看见别人的live2d贼炫酷，我也去搞来试一试。由张书樵的项目而来">
@@ -229,6 +229,27 @@
     </h1>
   
 
+      
+	<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">419字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+
+	
       </header>
       
       <div class="article-info article-info-post">
@@ -256,6 +277,7 @@
 <p><code>vim layout/layout.ejs</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--看板娘--&gt;</span><br><span class="line">&lt;script src=&quot;/live2d-widget/autoload.js&quot;&gt;&lt;/script&gt; #添加</span><br></pre></td></tr></table></figure></p>
 <p><code>vim live2d-widget/waifu.css</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">#waifu &#123;</span><br><span class="line">        position:fixed;</span><br><span class="line">        right:30px;</span><br><span class="line">        bottom:0;</span><br><span class="line">        z-index:1;</span><br><span class="line">        line-height:0;</span><br><span class="line">        transition:transform .3s ease-in-out;</span><br><span class="line">        transform:translateY(3px)</span><br><span class="line">&#125;</span><br><span class="line">#waifu:hover &#123;</span><br><span class="line">        -webkit-transform:translateY(0);</span><br><span class="line">        transform:translateY(0)</span><br><span class="line">&#125;</span><br><span class="line">@media (max-width:768px) &#123;</span><br><span class="line">        #waifu &#123;</span><br><span class="line">        display:none</span><br><span class="line">&#125;</span><br><span class="line">&#125;#waifu-tips &#123;</span><br><span class="line">        opacity:0;</span><br><span class="line">        margin:-20px 20px;</span><br><span class="line">        padding:5px 10px;</span><br><span class="line">        padding:5px 10px;</span><br><span class="line">        border:1px solid rgba(224,186,140,.62);</span><br><span class="line">        border-radius:12px;</span><br><span class="line">        background-color:rgba(236,217,188,.5);</span><br><span class="line">        box-shadow:0 3px 15px 2px rgba(191,158,118,.2);</span><br><span class="line">        font-size:14px;</span><br><span class="line">        line-height:24px;</span><br><span class="line">        color:#DDDDDD;</span><br><span class="line">        word-break:break-all;</span><br><span class="line">        text-overflow:ellipsis;</span><br><span class="line">        overflow:hidden;</span><br><span class="line">        position:absolute;</span><br><span class="line">        animation-delay:5s;</span><br><span class="line">        animation-duration:50s;</span><br><span class="line">        animation-iteration-count:infinite;</span><br><span class="line">        animation-name:shake;</span><br><span class="line">        animation-timing-function:ease-in-out</span><br><span class="line">&#125;</span><br><span class="line">#waifu #live2d &#123;</span><br><span class="line">        position:relative;</span><br><span class="line">        cursor:grab;</span><br><span class="line">        cursor:-webkit-grab;</span><br><span class="line">&#125;</span><br><span class="line">&#125;#waifu-tips &#123;</span><br><span class="line">        opacity:0;</span><br><span class="line">        margin:-20px 20px;</span><br><span class="line">        padding:5px 10px;</span><br><span class="line">        padding:5px 10px;</span><br><span class="line">        border:1px solid rgba(224,186,140,.62);</span><br><span class="line">        border-radius:12px;</span><br><span class="line">        background-color:rgba(236,217,188,.5);</span><br><span class="line">        box-shadow:0 3px 15px 2px rgba(191,158,118,.2);</span><br><span class="line">        font-size:14px;</span><br><span class="line">        line-height:24px;</span><br><span class="line">        color:#DDDDDD;</span><br><span class="line">        word-break:break-all;</span><br><span class="line">        text-overflow:ellipsis;</span><br><span class="line">        overflow:hidden;</span><br><span class="line">        position:absolute;</span><br><span class="line">        animation-delay:5s;</span><br><span class="line">        animation-duration:50s;</span><br><span class="line">        animation-iteration-count:infinite;</span><br><span class="line">        animation-name:shake;</span><br><span class="line">        animation-timing-function:ease-in-out</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>修改看板娘大小、位置、格式、文本内容等，可查看并修改 waifu-tips.js 、 waifu-tips.json 和 waifu.css。更多配置可以参考我的<a href="https://github.com/lanbainan" target="_blank" rel="noopener">GitHub</a></p>
+<p>##在线对话DaoVoice 待更新</p>
 <h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a></p>
 
       
@@ -269,7 +291,7 @@
         <p><span>本文标题:</span><a href="/2019/04/13/2019-04-13/">看板娘和在线对话</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
         <p><span>发布时间:</span>2019年04月13日 - 01时17分</p>
-        <p><span>最后更新:</span>2019年04月12日 - 16时27分</p>
+        <p><span>最后更新:</span>2019年04月14日 - 21时36分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/13/2019-04-13/" title="看板娘和在线对话">http://www.lanbainan.cn/2019/04/13/2019-04-13/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/04/13/2019-04-13/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -384,6 +406,7 @@
     <script>
         
     </script>
+
 </div>
       <footer id="footer">
     <div class="outer">
