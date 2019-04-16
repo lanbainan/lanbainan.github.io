@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2018/8 | 梦梦的小站</title>
+  <title>梦梦的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="记录成长，不断学习。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="梦梦的小站">
-<meta property="og:url" content="http://www.lanbainan.cn/archives/2018/08/index.html">
+<meta property="og:url" content="http://www.lanbainan.cn/page/3/index.html">
 <meta property="og:site_name" content="梦梦的小站">
 <meta property="og:description" content="记录成长，不断学习。">
 <meta property="og:locale" content="zh-CN">
@@ -28,6 +28,9 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
+    
+    
+  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -39,9 +42,9 @@
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: false,
+          isHome: true,
           isPost: false,
-          isArchive: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false
@@ -206,56 +209,100 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-netcat" class="article article-type-post" itemscope itemprop="blogPost">
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/21/2018-8-21/" class="archive-article-date">
-      <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">08-21</time>
+    <div class="article-meta">
+      <a href="/2018/07/25/netcat/" class="article-date">
+      <time datetime="2018-07-24T16:00:00.000Z" itemprop="datePublished">2018-07-25</time>
 </a>
-        </div>
-         
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/21/2018-8-21/">主动信息收集</a>
+      <a class="article-title" href="/2018/07/25/netcat/">NETCAT学习笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-archive">
+      
+	<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">672字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+
+	
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
           
+              <h3 id="NETCAT-NC"><a href="#NETCAT-NC" class="headerlink" title="NETCAT-NC"></a>NETCAT-NC</h3><p>netcat在网络工具中有“瑞士军刀”美誉，小巧玲珑，有人已经将其修改成大约10K左右，而且功能不减少。<br>主要用于：远程电子取证信息收集。<br>实例：<br>eetasploitable_ubuntu：192.168.136.133<br>kali linux：192.168.136.128<br>
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/信息安全/">信息安全</a>
     </div>
 
 
-          
+      
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/25/netcat/#more">前往异世界 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
     
+  </div>
+  
+</article>
 
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+  
 </div>
       <footer id="footer">
     <div class="outer">
@@ -331,17 +378,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
