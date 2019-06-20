@@ -26,8 +26,6 @@
 <meta name="twitter:description" content="iptablesnetfilter/iptables（简称为iptables）组成Linux平台下的包过滤防火墙，具有完成封包过滤、封包重定向和网络地址转换（NAT）等功能。netfilter是Linux 核心中一个通用架构，它提供了一系列的”表”(tables)，每个表由若干”链”(chains)组成，而每条链中可以有一条或数条规则(rule)组成。可以这样来理解，netfilter是表的容器，">
 <meta name="twitter:image" content="https://i.loli.net/2019/04/04/5ca572fc35954.png">
   
-    <link rel="alternative" href="/atom.xml" title="梦梦的小站" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/830.jpg">
   
@@ -565,6 +563,27 @@
 	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <div class="scroll" id="scroll">

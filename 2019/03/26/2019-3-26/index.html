@@ -24,8 +24,6 @@
 <meta name="twitter:description" content="Mysql加固掌握为Mysql数据库设置用户及账户权限来保证Mysql 数据库的安全。 user表12use mysqlSELECT Host,User,Password,Select_priv,Grant_priv FROM mysql.user;">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/26/5c99c303ea217.png">
   
-    <link rel="alternative" href="/atom.xml" title="梦梦的小站" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/830.jpg">
   
@@ -493,6 +491,27 @@
 	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <div class="scroll" id="scroll">

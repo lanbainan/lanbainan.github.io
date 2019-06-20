@@ -20,8 +20,6 @@
 <meta name="twitter:description" content="The cryptopals crypto challenges这是一个密码挑战可以使用大多数主流语言，解决问题环境：Python3.7.0项目地址：http://cryptopals.com/sets/1/challenges/1">
 <meta name="twitter:image" content="https://i.loli.net/2019/06/05/5cf77eaf672d323367.png">
   
-    <link rel="alternative" href="/atom.xml" title="梦梦的小站" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/830.jpg">
   
@@ -505,6 +503,27 @@ A = 65d = 0x41
 	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <div class="scroll" id="scroll">
