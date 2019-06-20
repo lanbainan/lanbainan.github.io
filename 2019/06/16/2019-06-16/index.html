@@ -3,27 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>NETCAT学习笔记 | 梦梦的小站</title>
+  <title>鸡藕椒盐味浅析 | 梦梦的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NETCAT-NCnetcat在网络工具中有“瑞士军刀”美誉，小巧玲珑，有人已经将其修改成大约10K左右，而且功能不减少。主要用于：远程电子取证信息收集。实例：eetasploitable_ubuntu：192.168.136.133kali linux：192.168.136.128">
-<meta name="keywords" content="linux,工具">
+  <meta name="description" content="#题目：公司食堂最新出了一种小吃，叫鸡藕椒盐味汉堡，售价八块钱，为了促销，上面有一个验证码，输入后可以再换取一个汉堡。但是问题是每个验证码几乎都有错误,而且打印的时候倒了一下。小明买到了一个汉堡，准备还原验证码，因为一个吃不饱啊~~">
+<meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NETCAT学习笔记">
-<meta property="og:url" content="http://www.lanbainan.cn/2018/07/25/netcat/index.html">
+<meta property="og:title" content="鸡藕椒盐味浅析">
+<meta property="og:url" content="http://www.lanbainan.cn/2019/06/16/2019-06-16/index.html">
 <meta property="og:site_name" content="梦梦的小站">
-<meta property="og:description" content="NETCAT-NCnetcat在网络工具中有“瑞士军刀”美誉，小巧玲珑，有人已经将其修改成大约10K左右，而且功能不减少。主要用于：远程电子取证信息收集。实例：eetasploitable_ubuntu：192.168.136.133kali linux：192.168.136.128">
+<meta property="og:description" content="#题目：公司食堂最新出了一种小吃，叫鸡藕椒盐味汉堡，售价八块钱，为了促销，上面有一个验证码，输入后可以再换取一个汉堡。但是问题是每个验证码几乎都有错误,而且打印的时候倒了一下。小明买到了一个汉堡，准备还原验证码，因为一个吃不饱啊~~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2018/06/27/5b331c4b2b95f.png">
-<meta property="og:image" content="https://i.loli.net/2018/06/27/5b331c4b3c1ed.png">
-<meta property="og:image" content="https://i.loli.net/2018/06/27/5b331cd79764a.png">
-<meta property="og:image" content="https://i.loli.net/2018/06/27/5b331d701cade.png">
-<meta property="og:image" content="https://i.loli.net/2018/06/27/5b331d7012044.png">
-<meta property="og:image" content="https://i.loli.net/2018/06/27/5b331f6785d17.png">
-<meta property="og:updated_time" content="2018-11-13T12:21:07.616Z">
+<meta property="og:updated_time" content="2019-06-20T06:56:14.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NETCAT学习笔记">
-<meta name="twitter:description" content="NETCAT-NCnetcat在网络工具中有“瑞士军刀”美誉，小巧玲珑，有人已经将其修改成大约10K左右，而且功能不减少。主要用于：远程电子取证信息收集。实例：eetasploitable_ubuntu：192.168.136.133kali linux：192.168.136.128">
-<meta name="twitter:image" content="https://i.loli.net/2018/06/27/5b331c4b2b95f.png">
+<meta name="twitter:title" content="鸡藕椒盐味浅析">
+<meta name="twitter:description" content="#题目：公司食堂最新出了一种小吃，叫鸡藕椒盐味汉堡，售价八块钱，为了促销，上面有一个验证码，输入后可以再换取一个汉堡。但是问题是每个验证码几乎都有错误,而且打印的时候倒了一下。小明买到了一个汉堡，准备还原验证码，因为一个吃不饱啊~~">
   
   
     <link rel="icon" href="/img/830.jpg">
@@ -211,11 +204,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-netcat" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2019-06-16" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/07/25/netcat/" class="article-date">
-      <time datetime="2018-07-24T16:00:00.000Z" itemprop="datePublished">2018-07-25</time>
+      <a href="/2019/06/16/2019-06-16/" class="article-date">
+      <time datetime="2019-06-16T14:49:00.000Z" itemprop="datePublished">2019-06-16</time>
 </a>
     </div>
   
@@ -228,7 +221,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      NETCAT学习笔记
+      鸡藕椒盐味浅析
     </h1>
   
 
@@ -238,13 +231,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/信息安全/">信息安全</a>
+    <a class="article-category-link" href="/categories/杂项/">杂项</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -254,26 +247,156 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="NETCAT-NC"><a href="#NETCAT-NC" class="headerlink" title="NETCAT-NC"></a>NETCAT-NC</h3><p>netcat在网络工具中有“瑞士军刀”美誉，小巧玲珑，有人已经将其修改成大约10K左右，而且功能不减少。<br>主要用于：远程电子取证信息收集。<br>实例：<br>eetasploitable_ubuntu：192.168.136.133<br>kali linux：192.168.136.128<br><a id="more"></a></p>
-<h3 id="1、telnet-获取banner信息"><a href="#1、telnet-获取banner信息" class="headerlink" title="1、telnet /获取banner信息"></a>1、telnet /获取banner信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc –nv 1.1.1.1 22</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/06/27/5b331c4b2b95f.png" alt="3.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc –nv 1.1.1.1 1-1024</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2018/06/27/5b331c4b3c1ed.png" alt="4.png"><br>默认扫描TCP端口，加u参数扫描UDP端口</p>
-<h3 id="2、传输文本信息"><a href="#2、传输文本信息" class="headerlink" title="2、传输文本信息"></a>2、传输文本信息</h3><p>通过监听端口，类似于QQ微信聊天窗口，但是必须双方同时在线，一方断开即结束<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A：nc -l -p 4444</span><br><span class="line">B：nc –nv 1.1.1.1 4444</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2018/06/27/5b331cd79764a.png" alt="5.png"></p>
-<h3 id="3、传输文件-目录"><a href="#3、传输文件-目录" class="headerlink" title="3、传输文件/目录"></a>3、传输文件/目录</h3><p>传输文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A：nc -lp 4444 &gt; 123.sh（将4444端口侦听到的内容输出到123.sh中）</span><br><span class="line">B：nc -nv 1.1.1.1 4444 &lt; 123.sh –q 1（将123.sh放到目的ip端口上，传递完成1秒后断开）</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2018/06/27/5b331d701cade.png" alt="6.png"><br>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A：nc -q 1 -lp 333 &lt; 123.sh（将123.sh放在333端口上，一旦传输完成1秒后断开）</span><br><span class="line">B： nc -nv 1.1.1.1 333 &gt; 123.sh（侦听目的ip333端口，将内容输出到123.sh）</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2018/06/27/5b331d7012044.png" alt="7.png"><br>传输目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A：tar -cvf - firefox/ | nc -lp 333 –q 1</span><br><span class="line">B：nc -nv 1.1.1.1 333 | tar -xvf –</span><br></pre></td></tr></table></figure></p>
-<p>nc本身是不支持目录传输，发送端将目录打包放在333端口，接收端将接受到的文件解包还原目录，对于我们看到的效果就是目录传输。</p>
-<h3 id="4、加密传输文件"><a href="#4、加密传输文件" class="headerlink" title="4、加密传输文件"></a>4、加密传输文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A：nc -lp 333 | mcrypt --flush -Fbqd -a rijndael-256 -m ecb &gt; 1.mp4</span><br><span class="line">B： mcrypt --flush -Fbq -a rijndael-256 -m ecb &lt; a.mp4 | nc -nv 1.1.1.1 333 -q 1</span><br></pre></td></tr></table></figure>
-<p>mcrypt需要下载，这个多了加密解密的过程</p>
-<h3 id="5、远程控制"><a href="#5、远程控制" class="headerlink" title="5、远程控制"></a>5、远程控制</h3><p>这个远程控制是双向的，A可以控制B，B也可以控制A<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A：nc -lp 333 -c bash</span><br><span class="line">B：nc 1.1.1.1 333</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2018/06/27/5b331f6785d17.png" alt="8.png"><br>注：Windows用户把bash改成cmd；<br>有点像QQ的远程控制，一方请求，一方接受。</p>
-<h3 id="6、加密所有流量"><a href="#6、加密所有流量" class="headerlink" title="6、加密所有流量"></a>6、加密所有流量</h3><p>在nc中传输数据都是以明文传输的，不是很安全；<br>Nc缺乏加密和身份验证的能力;<br>Ncat并不是linux自带的工具;<br>Ncat包含于nmap工具包中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A：ncat ncat -c bash --allow 192.168.20.14 -vnl 333 --ssl</span><br><span class="line">B：ncat -nv 1.1.1.1 333 --ssl</span><br></pre></td></tr></table></figure></p>
-<h3 id="7、流媒体服务器"><a href="#7、流媒体服务器" class="headerlink" title="7、流媒体服务器"></a>7、流媒体服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A： cat 1.mp4 | nc -lp 333</span><br><span class="line">B： 1.1.1.1 333 | mplayer -vo x11 -cache 3000 –</span><br></pre></td></tr></table></figure>
-<p>很有意思的一个功能，在线影视音频播放器</p>
-<h3 id="8、远程克隆硬盘"><a href="#8、远程克隆硬盘" class="headerlink" title="8、远程克隆硬盘"></a>8、远程克隆硬盘</h3><p>能将磁盘扇区和内存完整的克隆到本地，块级别的复制。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A： nc -lp 333 | dd of=/dev/sda</span><br><span class="line">B： dd if=/dev/sda | nc -nv 1.1.1.1 333 –q 1</span><br></pre></td></tr></table></figure></p>
-<p>以上基本都是隧道、重定与NETCAt的结合应用</p>
-<h3 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h3><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a></p>
+        <p>#题目：<br>公司食堂最新出了一种小吃，叫鸡藕椒盐味汉堡，售价八块钱，为了促销，上面有一个验证码，输入后可以再换取一个汉堡。但是问题是每个验证码几乎都有错误,而且打印的时候倒了一下。小明买到了一个汉堡，准备还原验证码，因为一个吃不饱啊~~<a id="more"></a>验证码如下：1100 1010 0000 。把答案哈希一下就可以提交了。(答案为正确值(不包括数字之间的空格)的32位md5值的小写形式)<br><!--more--></p>
+<h2 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h2><p>仔细阅读</p>
+<ul>
+<li><a href="https://www.cnblogs.com/dushikang/p/8334776.html" target="_blank" rel="noopener">奇偶校验位</a></li>
+<li><a href="https://blog.csdn.net/blue_starry_sky/article/details/53997548" target="_blank" rel="noopener">汉明码原理</a></li>
+</ul>
+<p>公式：2^k≥n+k+1</p>
+<h2 id="0x01-校验位"><a href="#0x01-校验位" class="headerlink" title="0x01 校验位"></a>0x01 校验位</h2><table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>编号</strong></th>
+<th style="text-align:center">1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>……</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>二进制</strong></td>
+<td style="text-align:center">0001</td>
+<td>0010</td>
+<td>0011</td>
+<td>0100</td>
+<td>0101</td>
+<td>0110</td>
+<td>0111</td>
+<td>1000</td>
+<td>1001</td>
+<td>……</td>
+</tr>
+</tbody>
+</table>
+<p>校验位：<code>1</code>、<code>2</code>、<code>4</code>、<code>8</code></p>
+<h2 id="0x02-排列"><a href="#0x02-排列" class="headerlink" title="0x02 排列"></a>0x02 排列</h2><table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>汉明码</strong></th>
+<th style="text-align:center">0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>1</th>
+<th>0</th>
+<th>1</th>
+<th>0</th>
+<th>0</th>
+<th>1</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>校验位</strong></td>
+<td style="text-align:center">0</td>
+<td>0</td>
+<td>-</td>
+<td>0</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>信息位</strong></td>
+<td style="text-align:center">-</td>
+<td>-</td>
+<td>0</td>
+<td>-</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>-</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>发送端校验位：1000<br>得到：11000100</p>
+<h2 id="0x03-纠错"><a href="#0x03-纠错" class="headerlink" title="0x03 纠错"></a>0x03 纠错</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">C</th>
+<th style="text-align:center">1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>信息位</strong></td>
+<td style="text-align:center">0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>接收端检验位：<br>P4=C5+C6+C7+C8=0+0+1+1=0<br>P3=C2+C3+C4+C8=0+1+0+1=0<br>P2=C1+C3+C4+C6+C7=0+1+0+0+1=0<br>P1=C1+C2+C4+C5+C7=0+0+0+0+1=1</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>发送端校验位</strong></th>
+<th style="text-align:center">1</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>接收端检验位</strong></td>
+<td style="text-align:center">0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>监督位</strong></td>
+<td style="text-align:center">1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>当监督位为：0000。说明接收方生成的校验位和收到的校验位相同，否则说明出错。<br>将<code>1001</code>转换为10进制<code>9</code>,说明验证码第9位出错，<br>正确的是：<code>110110100000</code>,md5哈希一下即答案</p>
+<h1 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h1><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a></p>
 
       
       
@@ -283,13 +406,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/07/25/netcat/">NETCAT学习笔记</a></p>
+        <p><span>本文标题:</span><a href="/2019/06/16/2019-06-16/">鸡藕椒盐味浅析</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
-        <p><span>发布时间:</span>2018年07月25日 - 00时00分</p>
-        <p><span>最后更新:</span>2018年11月13日 - 20时21分</p>
+        <p><span>发布时间:</span>2019年06月16日 - 22时49分</p>
+        <p><span>最后更新:</span>2019年06月20日 - 14时56分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/07/25/netcat/" title="NETCAT学习笔记">http://www.lanbainan.cn/2018/07/25/netcat/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2018/07/25/netcat/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/06/16/2019-06-16/" title="鸡藕椒盐味浅析">http://www.lanbainan.cn/2019/06/16/2019-06-16/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/06/16/2019-06-16/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -302,18 +425,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/07/25/2018-7-22/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          被动信息收集
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/25/hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">搭建hexo博客的坑</div>
+    <a href="/2019/06/12/2019-06-12/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">XOR编码实现</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -325,7 +439,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#NETCAT-NC"><span class="toc-number">1.</span> <span class="toc-text">NETCAT-NC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1、telnet-获取banner信息"><span class="toc-number">2.</span> <span class="toc-text">1、telnet /获取banner信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、传输文本信息"><span class="toc-number">3.</span> <span class="toc-text">2、传输文本信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、传输文件-目录"><span class="toc-number">4.</span> <span class="toc-text">3、传输文件/目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、加密传输文件"><span class="toc-number">5.</span> <span class="toc-text">4、加密传输文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、远程控制"><span class="toc-number">6.</span> <span class="toc-text">5、远程控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、加密所有流量"><span class="toc-number">7.</span> <span class="toc-text">6、加密所有流量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、流媒体服务器"><span class="toc-number">8.</span> <span class="toc-text">7、流媒体服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、远程克隆硬盘"><span class="toc-number">9.</span> <span class="toc-text">8、远程克隆硬盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#到此结束"><span class="toc-number">10.</span> <span class="toc-text">到此结束</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x00"><span class="toc-number">1.</span> <span class="toc-text">0x00</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01-校验位"><span class="toc-number">2.</span> <span class="toc-text">0x01 校验位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02-排列"><span class="toc-number">3.</span> <span class="toc-text">0x02 排列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x03-纠错"><span class="toc-number">4.</span> <span class="toc-text">0x03 纠错</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#到此结束"><span class="toc-number"></span> <span class="toc-text">到此结束</span></a>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -404,13 +518,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/07/25/2018-7-22/" title="上一篇: 被动信息收集">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/07/25/hexo/" title="下一篇: 搭建hexo博客的坑">
+            <a href="/2019/06/12/2019-06-12/" title="下一篇: XOR编码实现">
                 <i class="fa fa-angle-right"></i>
             </a>
         
