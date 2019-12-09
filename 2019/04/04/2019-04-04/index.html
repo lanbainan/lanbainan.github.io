@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/04/07/5ca9d3a835829.png">
 <meta property="og:image" content="https://i.loli.net/2019/04/08/5caabeb25b5e0.png">
 <meta property="og:image" content="https://i.loli.net/2019/04/04/5ca58a69f1e58.png">
-<meta property="og:updated_time" content="2019-04-08T05:09:22.984Z">
+<meta property="og:updated_time" content="2019-11-18T07:46:55.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux防火墙-iptables&#x2F;firewalld">
 <meta name="twitter:description" content="iptablesnetfilter/iptables（简称为iptables）组成Linux平台下的包过滤防火墙，具有完成封包过滤、封包重定向和网络地址转换（NAT）等功能。netfilter是Linux 核心中一个通用架构，它提供了一系列的”表”(tables)，每个表由若干”链”(chains)组成，而每条链中可以有一条或数条规则(rule)组成。可以这样来理解，netfilter是表的容器，">
@@ -286,7 +286,8 @@
 <p>1）查看系统中iptables中已经有的规则，知道如何关闭和启用这些规则<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# iptables -L #查看现有防火墙所有策略</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# service iptables status #查看iptables状态</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.loli.net/2019/04/04/5ca572fc35954.png" alt="1.png"><br><strong>禁止ping</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# iptables -A INPUT -p icmp -j DROP #在INPUT链中增加一条规则（丢弃ICMP包）</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.loli.net/2019/04/04/5ca576af89756.png" alt="2.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# iptables -A INPUT -p icmp -j REJECT #(返回一个终止数据包，拒绝连接动作)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2019/04/04/5ca576af89756.png" alt="2.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# iptables -A INPUT -p icmp -j REJECT #(返回一个终止数据包，拒绝连接动作)</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.loli.net/2019/04/04/5ca577a6c7cdf.png" alt="3.png"></p>
 <blockquote>
 <ul>
@@ -368,7 +369,7 @@
         <p><span>本文标题:</span><a href="/2019/04/04/2019-04-04/">Linux防火墙-iptables/firewalld</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 EV 的个人博客">EV</a></p>
         <p><span>发布时间:</span>2019年04月04日 - 00时00分</p>
-        <p><span>最后更新:</span>2019年04月08日 - 13时09分</p>
+        <p><span>最后更新:</span>2019年11月18日 - 15时46分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/04/2019-04-04/" title="Linux防火墙-iptables/firewalld">http://www.lanbainan.cn/2019/04/04/2019-04-04/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.lanbainan.cn/2019/04/04/2019-04-04/　　作者: EV" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
